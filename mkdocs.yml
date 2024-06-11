@@ -74,11 +74,13 @@ markdown_extensions:
 
 nav:
   - 前言: "index.md"
-  - C++:
-    - v1.0.0: "C++.md"
   - 新生指南:
     - v1.0.0: "人工智能新生指南2023.md"
     - v2.0.0: "人工智能新生指南2024.md"
+  - 生活指南:
+    - v0.1.0: "生活指南.md"
+  - C++:
+    - v1.0.0: "C++.md"
 
 extra_javascript:
   - js/mathjax.js

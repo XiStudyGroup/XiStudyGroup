@@ -1,9 +1,9 @@
 site_name: 汐学组
 
-repo_name: xi-study-group
-repo_url: https://github.com/Axi404/xi-study-group/
+repo_name: XiStudyGroup
+repo_url: https://github.com/XiStudyGroup/XiStudyGroup/
 
-copyright: Copyright &copy; 2024-present <a href="https://github.com/Axi404" target="_blank" rel="noopener noreferrer">Axi404</a>
+copyright: Copyright &copy; 2024-present <a href="https://github.com/XiStudyGroup" target="_blank" rel="noopener noreferrer">XiStudyGroup</a>
 
 theme:
   name: material

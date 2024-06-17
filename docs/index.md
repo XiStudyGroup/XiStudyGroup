@@ -34,7 +34,7 @@ AI Version的CS自学指南，如何自学人工智能，哪些教材/课程/视
 
 #### C++程序设计-绩点与寄点
 
-**\[[链接](https://xistudygroup.github.io/XiStudyGroup/C%2B%2B/)\]**
+**\[[链接](https://xistudygroup.github.io/XiStudyGroup/C%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E7%BB%A9%E7%82%B9%E4%B8%8E%E5%AF%84%E7%82%B9/)\]**
 
 C++程序设计教辅，内容详解/自制题目。
 

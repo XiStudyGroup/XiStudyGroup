@@ -8,6 +8,10 @@
 - 西安交大人工智能新生指南2024
 - C++程序设计-绩点与寄点
 
+## 动态
+
+![Alt](https://repobeats.axiom.co/api/embed/99c91d9dd8667bc5c0919b1f3b5e9cc9dfd414bc.svg "Repobeats analytics image")
+
 ## 贡献者
 
 <a href="https://github.com/XiStudyGroup/XiStudyGroup/graphs/contributors">

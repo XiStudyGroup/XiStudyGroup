@@ -2,7 +2,7 @@
 
 ## C++程序设计-寄点与绩点
 
-\[[下载](https://raw.githubusercontent.com/HIT-FC-OpenCS/CS_Courses/main/src/C++程序设计-绩点与寄点.pdf)\]|\[[预览](../学习资料/C++程序设计-绩点与寄点.md)\]
+\[[下载](https://raw.githubusercontent.com/XiStudyGroup/XiStudyGroup/main/src/C++程序设计-绩点与寄点.pdf)\]|\[[预览](../学习资料/C++程序设计-绩点与寄点.md)\]
 
 《C++程序设计》教辅，其中包括内容详解以及自制题目。章节目录包括：
 

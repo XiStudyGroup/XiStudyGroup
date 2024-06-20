@@ -17,3 +17,9 @@
 - 继承
 - 多态
 - 其他
+
+## 计算机科学与人工智能的数学基础上复习大纲
+
+\[[下载](https://raw.githubusercontent.com/XiStudyGroup/XiStudyGroup/main/src/计算机科学与人工智能的数学基础上复习大纲.pdf)\]|\[[预览](../学习资料/计算机科学与人工智能的数学基础上复习大纲.md)\]
+
+《计算机科学与人工智能的数学基础上》教辅，其中cheatsheet形式的考点内容。

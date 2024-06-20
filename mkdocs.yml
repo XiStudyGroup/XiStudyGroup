@@ -80,8 +80,8 @@ nav:
   - 学习资料:
     - Released: "学习资料/Released.md"
     - C++程序设计-绩点与寄点: "学习资料/C++程序设计-绩点与寄点.md"
-
+    - 计算机科学与人工智能的数学基础上复习大纲: "学习资料/计算机科学与人工智能的数学基础上复习大纲.md"
 extra_javascript:
-  - js/mathjax.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

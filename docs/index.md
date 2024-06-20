@@ -26,15 +26,21 @@ AI Version的CS自学指南，如何自学人工智能，哪些教材/课程/视
 
 ### 生活指南
 
-**\[[链接](https://xistudygroup.github.io/XiStudyGroup/%E7%94%9F%E6%B4%BB%E6%8C%87%E5%8D%97/)\]**
+**\[[链接](生活指南.md)\]**
 
 西安交大的日常指南，紧急事务处理/学生日常捷径/自我提升方法/不为人知的小技巧。
 
 ### 学习资料
 
+#### Released
+
+**\[[链接](学习资料/Released.md)\]**
+
+开源资料的PDF下载页，可下载全部资料的PDF版本，全部资料使用[Typora](https://typora.io)进行渲染，相关主题将在资料处详细给出。
+
 #### C++程序设计-绩点与寄点
 
-**\[[链接](https://xistudygroup.github.io/XiStudyGroup/C%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E7%BB%A9%E7%82%B9%E4%B8%8E%E5%AF%84%E7%82%B9/)\]**
+**\[[链接](学习资料/C++程序设计-绩点与寄点.md)\]**
 
 C++程序设计教辅，内容详解/自制题目。
 

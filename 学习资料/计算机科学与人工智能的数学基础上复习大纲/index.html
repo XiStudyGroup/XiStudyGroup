@@ -1,0 +1,2247 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../C%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E7%BB%A9%E7%82%B9%E4%B8%8E%E5%AF%84%E7%82%B9/">
+      
+      
+        <link rel="next" href="../%E8%AE%A4%E7%9F%A5%E5%BF%83%E7%90%86%E5%AD%A6%E5%AE%9E%E9%AA%8C%E6%8C%87%E5%8D%97/">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>计算机科学与人工智能的数学基础上复习大纲 - 汐学组</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Times+New+Roman:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Times New Roman";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="汐学组" class="md-header__button md-logo" aria-label="汐学组" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            汐学组
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              计算机科学与人工智能的数学基础上复习大纲
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/XiStudyGroup/XiStudyGroup/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XiStudyGroup
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="汐学组" class="md-nav__button md-logo" aria-label="汐学组" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    汐学组
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/XiStudyGroup/XiStudyGroup/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XiStudyGroup
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://xistudygroup.github.io/SurviveXJTU/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    西安交大生存指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%96%B0%E7%94%9F%E6%8C%87%E5%8D%972024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    人工智能新生指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%9F%E6%B4%BB%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    生活指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    学习资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            学习资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Released/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Released
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E7%BB%A9%E7%82%B9%E4%B8%8E%E5%AF%84%E7%82%B9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++程序设计-绩点与寄点
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    计算机科学与人工智能的数学基础上复习大纲
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    计算机科学与人工智能的数学基础上复习大纲
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题的定义
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题的真值
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题的分类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命题的分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单命题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      复杂命题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      联结词
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题公式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      公式层数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      赋值
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      等价公式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      置换定理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      析取范式与合取范式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="析取范式与合取范式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      范式存在定理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      主合取范式与主析取范式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主合取范式与主析取范式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      极小项与极大项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      真值表法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      相互转换
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      真值函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      冗余与全功能集
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="冗余与全功能集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      冗余的联结词
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      全功能集
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      推理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      推理定律
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      推理规则
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      两种特殊证明法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="两种特殊证明法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      附加前提证明法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      反证法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A4%E7%9F%A5%E5%BF%83%E7%90%86%E5%AD%A6%E5%AE%9E%E9%AA%8C%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    认知心理学实验指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题的定义
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题的真值
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题的分类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命题的分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单命题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      复杂命题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      联结词
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题公式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      公式层数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      赋值
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      等价公式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      置换定理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      析取范式与合取范式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="析取范式与合取范式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      范式存在定理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      主合取范式与主析取范式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主合取范式与主析取范式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      极小项与极大项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      真值表法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      相互转换
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      真值函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      冗余与全功能集
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="冗余与全功能集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      冗余的联结词
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      全功能集
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      推理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      推理定律
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      推理规则
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      两种特殊证明法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="两种特殊证明法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      附加前提证明法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      反证法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="_1">命题逻辑</h1>
+<h2 id="_2">命题的定义</h2>
+<p>能判断真假的陈述句叫做命题。</p>
+<ul>
+<li>命题是陈述句。其他的语句，如疑问句、祈使句、感叹句均不是命题。</li>
+<li>这个陈述句对事物的判断是否符合客观事实是可以给出结论的：不是真 (符合客观事实)就是假 (不符合客观事实)不能不真也不假，也不能既真又假，所以又称二值逻辑。</li>
+<li><mark>悖论不是命题</mark>。</li>
+</ul>
+<h2 id="_3">命题的真值</h2>
+<p>真值只取两个值：真 (判断与事实相符)或假 (判断与事实不符)。通常用 1 (或字母 T)表示真，用 0 (或字母 F)表示假。</p>
+<h2 id="_4">命题的分类</h2>
+<h3 id="_5">简单命题</h3>
+<p>也称原子命题，指不能再分解为更简单的陈述句的命题。</p>
+<h3 id="_6">复杂命题</h3>
+<p>由若干简单命题用联结词联结成的命题。</p>
+<h2 id="_7">联结词</h2>
+<ul>
+<li>否定联结词 <span class="arithmatex">\(\neg\)</span>。否定联结词是一元联结词。相当于日常用语中的“非”、”不”、“无”、“没有”等。</li>
+<li>合取联结词 <span class="arithmatex">\(\wedge\)</span>。合取词是二元联结词。相当于自然语言中的“与”、“并且“、“而且”、“也”等。</li>
+<li>析取联结词 <span class="arithmatex">\(\vee\)</span>。析取词是二元联结词。相当于自然语言中的“或”、“要么…要么”等。</li>
+<li>蕴含联结词 <span class="arithmatex">\(\to \gets\)</span>。蕴涵词是二元联结词。相当于自然语言中的“若... 则”、“如果... 就”、”只有... 才”。</li>
+<li>等价联结词 <span class="arithmatex">\(\leftrightarrow\)</span>。等价联结词是二元联结词。相当于自然语言中的“等价”、“当且仅当”、“充要条件”等。</li>
+</ul>
+<p>同时联结词的运算顺序优先级按照上方的由上到下递减。</p>
+<h2 id="_8">命题公式</h2>
+<ol>
+<li>单个命题常项或命题变项 <span class="arithmatex">\(p, q, r, \ldots, p_{i} q_{p} r_{i}, \ldots\)</span> 是命题公式。</li>
+<li>如果 <span class="arithmatex">\(A\)</span> 是命题公式，则 <span class="arithmatex">\(\neg A\)</span> 也是命题公式。</li>
+<li>如果 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 是命题公式，则 <span class="arithmatex">\(A \wedge B\)</span>，<span class="arithmatex">\(A \vee B\)</span>，<span class="arithmatex">\(A \rightarrow B\)</span>，<span class="arithmatex">\(A \leftrightarrow B\)</span> 均是命题公式;</li>
+<li>只有有限次地利用 (1)(3)形成的符号串才是命题公式。</li>
+</ol>
+<h2 id="_9">公式层数</h2>
+<ol>
+<li>若 <span class="arithmatex">\(A\)</span> 是单个命题常项或命题变项, 则称 <span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(0\)</span> 层公式;</li>
+<li>称 <span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(n+1(n \geq 0)\)</span> 层公式是指 <span class="arithmatex">\(A\)</span> 符合下列情况之一:<ol>
+<li><span class="arithmatex">\(A=\neg B\)</span>，<span class="arithmatex">\(B\)</span> 是 <span class="arithmatex">\(n\)</span> 层公式。</li>
+<li><span class="arithmatex">\(A=B \wedge C\)</span>，其中 <span class="arithmatex">\(B\)</span>、<span class="arithmatex">\(C\)</span> 分别为 <span class="arithmatex">\(i\)</span> 层和 <span class="arithmatex">\(j\)</span> 层公式，且 <span class="arithmatex">\(n=\max (i, j)\)</span>。</li>
+<li><span class="arithmatex">\(A=B \vee C\)</span>，其中 <span class="arithmatex">\(B\)</span>、<span class="arithmatex">\(C\)</span> 分别为 <span class="arithmatex">\(i\)</span> 层和 <span class="arithmatex">\(j\)</span> 层公式，且 <span class="arithmatex">\(n=\max (i, j)\)</span>。</li>
+<li><span class="arithmatex">\(A=B \rightarrow C\)</span>，其中 <span class="arithmatex">\(B\)</span>、<span class="arithmatex">\(C\)</span> 分别为 <span class="arithmatex">\(i\)</span> 层和 <span class="arithmatex">\(j\)</span> 层公式，且 <span class="arithmatex">\(n=\max (i, j)\)</span>。</li>
+<li><span class="arithmatex">\(A=B \leftrightarrow C\)</span>，其中 <span class="arithmatex">\(B\)</span>、<span class="arithmatex">\(C\)</span> 分别为 <span class="arithmatex">\(i\)</span> 层和 <span class="arithmatex">\(j\)</span> 层公式, 且 <span class="arithmatex">\(n=\max (i, j)\)</span>。</li>
+</ol>
+</li>
+</ol>
+<h2 id="_10">赋值</h2>
+<p>可以使用真值表来计算命题公式的值。</p>
+<ul>
+<li>重言式/永真式：若命题公式 <span class="arithmatex">\(A\)</span> 在所有赋值下都是真的，则称 <span class="arithmatex">\(A\)</span> 为重言式或永真式。</li>
+<li>矛盾式/永假式：<span class="arithmatex">\(A\)</span> 在所有赋值下都是假的，则称 <span class="arithmatex">\(A\)</span> 为称为矛盾式或永假式。</li>
+<li>可满足式：若 <span class="arithmatex">\(A\)</span> 至少存在一组成真赋值。</li>
+</ul>
+<p>设 <span class="arithmatex">\(A\)</span> 、 <span class="arithmatex">\(B\)</span> 是两个命题公式, 若等价式 <span class="arithmatex">\(A \leftrightarrow B\)</span> 是重言式 , 则称公式 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 是等价的, 记作 <span class="arithmatex">\(A \Leftrightarrow B\)</span> 。</p>
+<p>公式之间的等价关系的特点：</p>
+<ul>
+<li>自反的： <span class="arithmatex">\(A \Leftrightarrow A\)</span> 。</li>
+<li>对称的：若 <span class="arithmatex">\(A \Leftrightarrow B\)</span> ，则 <span class="arithmatex">\(B \Leftrightarrow A\)</span> 。</li>
+<li>传递的：若 <span class="arithmatex">\(A \Leftrightarrow B\)</span> ， <span class="arithmatex">\(B \Leftrightarrow C\)</span> ，则 <span class="arithmatex">\(A \Leftrightarrow C\)</span> 。</li>
+</ul>
+<h2 id="_11">等价公式</h2>
+<p>常用等价公式：</p>
+<div class="arithmatex">\[
+\begin{array}{ll}
+\neg(\neg A) \Leftrightarrow A &amp; \text {双重否定律}\\
+A \vee A \Leftrightarrow A，A \wedge A \Leftrightarrow A &amp; \text {等幂律}\\
+A \vee B \Leftrightarrow B \vee A，A \wedge B \Leftrightarrow B \wedge A &amp; \text {交换律}\\
+(A \vee B) \vee C \Leftrightarrow A \vee(B \vee C) &amp; \text {结合律}\\
+(A \wedge B) \wedge C \Leftrightarrow A \wedge(B \wedge C)\\
+A \vee(B \wedge C) \Leftrightarrow(A \vee B) \wedge(A \vee C) &amp; \text {分配律}\\
+A \wedge(B \vee C) \Leftrightarrow(A \wedge B) \vee(A \wedge C)\\
+\neg(A \vee B) \Leftrightarrow \neg A \wedge \neg B &amp; \text {德·摩根律}\\
+\neg(A \wedge B) \Leftrightarrow \neg A \vee \neg B\\
+A \vee(A \wedge B) \Leftrightarrow A &amp; \text {吸收律}\\
+A \wedge(A \vee B) \Leftrightarrow A\\
+A \vee 1 \Leftrightarrow 1，A \wedge 0 \Leftrightarrow 0 &amp; \text {零律}\\
+A \vee 0 \Leftrightarrow A，A \wedge 1 \Leftrightarrow A &amp; \text {同一律}\\
+A \vee \neg A \Leftrightarrow 1 &amp; \text {排中律}\\
+A \wedge \neg A \Leftrightarrow 0 &amp; \text {矛盾律}\\
+A \rightarrow B \Leftrightarrow \neg A \vee B &amp; \text {蕴含等值式}\\
+A \leftrightarrow B \Leftrightarrow (A \rightarrow B) \wedge (B \rightarrow A) &amp; \text {等价 (双条件)等值式}\\
+A \leftrightarrow B \Leftrightarrow (A \wedge B) \vee (\neg A \wedge \neg B)\\
+A \rightarrow B \Leftrightarrow \neg B \rightarrow \neg A &amp; \text {假言易位}\\
+A \leftrightarrow B \Leftrightarrow \neg A \leftrightarrow \neg B &amp; \text {等价否定等值式}\\
+(A \rightarrow B) \wedge (A \rightarrow \neg B) \Leftrightarrow \neg A &amp; \text {归谬论}
+\end{array}
+\]</div>
+<p><mark>等价的书写规范？</mark></p>
+<h2 id="_12">置换定理</h2>
+<p>设 <span class="arithmatex">\(\Phi (A)\)</span> 是含命题公式 <span class="arithmatex">\(A\)</span> 的命题公式， <span class="arithmatex">\(\Phi (B)\)</span> 是用命题公式 <span class="arithmatex">\(B\)</span> 置换了 <span class="arithmatex">\(\Phi (A)\)</span> 中的 <span class="arithmatex">\(A\)</span> 之后的得到的命题公式，如果 <span class="arithmatex">\(A \Leftrightarrow B\)</span> ，则 <span class="arithmatex">\(\Phi (A) \Leftrightarrow \Phi (B)\)</span> 。</p>
+<h2 id="_13">析取范式与合取范式</h2>
+<p>仅由有限个<strong>简单合取式</strong>构成的<strong>析取式</strong>称为<strong>析取范式</strong>。</p>
+<p>仅由有限个<strong>简单析取式</strong>构成的<strong>合取式</strong>称为<strong>合取范式</strong>。</p>
+<h3 id="_14">范式存在定理</h3>
+<p>任一命题公式都存在与之等价的析取范式和合取范式。</p>
+<h2 id="_15">主合取范式与主析取范式</h2>
+<h3 id="_16">极小项与极大项</h3>
+<h3 id="_17">真值表法</h3>
+<h3 id="_18">相互转换</h3>
+<h2 id="_19">真值函数</h2>
+<p>称定义域为 <span class="arithmatex">\(\{00 \ldots 0,00 \ldots 1, \ldots, 11 \ldots 1\}\)</span> ，值域为 <span class="arithmatex">\(\{0,1\}\)</span> 的函数是 <span class="arithmatex">\(n\)</span> 元真值函数 (其中 <span class="arithmatex">\(n \geq 1\)</span> )。</p>
+<p>常用 <span class="arithmatex">\(F:\{0,1\}^{n} \rightarrow\{0,1\}\)</span> 表示 <span class="arithmatex">\(F\)</span> 是 <span class="arithmatex">\(n\)</span> 元真值函数。</p>
+<p>共有 <span class="arithmatex">\(2^{2^{n}}\)</span> 个 <span class="arithmatex">\(n\)</span> 元真值函数。</p>
+<h2 id="_20">冗余与全功能集</h2>
+<h3 id="_21">冗余的联结词</h3>
+<p>在一个联结词的集合中, 如果一个联结词可由集合中的其他联结词定义, 则称此联结词为冗余的联结词, 否则称为独立的联结词。</p>
+<h3 id="_22">全功能集</h3>
+<p>设 <span class="arithmatex">\(S\)</span> 是一个联结词集合，如果任何真值函数都可以由仅含 S 中的联结词构成的公式表示，则称 <span class="arithmatex">\(S\)</span> 是联结词全功能集。</p>
+<p>若 <span class="arithmatex">\(S\)</span> 是全功能集，则任何命题公式都可用 <span class="arithmatex">\(S\)</span> 中的联结词表示。</p>
+<p>若 <span class="arithmatex">\(S_1\)</span> ， <span class="arithmatex">\(S_2\)</span> 是两个联结词集合，且 <span class="arithmatex">\(S_1\subseteq S_2\)</span> ，若 <span class="arithmatex">\(S_1\)</span> 是全功能集，则 <span class="arithmatex">\(S_2\)</span> 也是全功能集。</p>
+<p>若一个联结词的全功能集中不含冗余的联结词，则称它是极小全功能集。</p>
+<h2 id="_23">推理</h2>
+<p>前提：已知的命题公式。</p>
+<p>结论：从前提出发应用推理规则推出的命题公式。</p>
+<p>推理：从前提推出结论的思维过程。</p>
+<p>若 <span class="arithmatex">\(\left (A_{1} \wedge A_{2} \wedge \ldots \wedge A_{\mathrm{n}}\right) \rightarrow B\)</span> 为重言式, 则称 <span class="arithmatex">\(A_{1}, A_{2}, \ldots, A_{n}\)</span> 推出结论 <span class="arithmatex">\(B\)</span> 的推理正确， <span class="arithmatex">\(B\)</span> 是 <span class="arithmatex">\(A_{1}, A_{2}, \ldots, A_{n}\)</span> 的逻辑结论或有效结论。称 <span class="arithmatex">\(\left (A_{1} \wedge A_{2} \wedge \ldots \wedge A_{\mathrm{n}}\right) \rightarrow B\)</span> 为由前提 <span class="arithmatex">\(A_{1}, A_{2}, \ldots, A_{n}\)</span> 推出结论 <span class="arithmatex">\(B\)</span> 的推理的形式结构。</p>
+<p>用“ <span class="arithmatex">\(A \Rightarrow B\)</span> ”表示 <span class="arithmatex">\(A \rightarrow B\)</span> 是重言式，因而若有前提 <span class="arithmatex">\(A_{1}, A_{2}, \ldots, A_{n}\)</span> 推出结论 <span class="arithmatex">\(B\)</span> 的推理正确，也记作 <span class="arithmatex">\(\left (A_{1} \wedge A_{2} \wedge \ldots \wedge A_{\mathrm{n}}\right) \Rightarrow B\)</span> 或：</p>
+<p>前提：<span class="arithmatex">\(A_{1}, A_{2}, \ldots, A_{n}\)</span>
+结论：<span class="arithmatex">\(B\)</span> </p>
+<h2 id="_24">推理定律</h2>
+<div class="arithmatex">\[
+\begin{array}{ll}
+A \Rightarrow (A \vee B) &amp; \text { 附加律 } \\
+(A \wedge B) \Rightarrow A &amp; \text { 化简律 } \\
+(A \rightarrow B) \wedge A \Rightarrow B &amp; \text { 假言推理 } \\
+(A \rightarrow B) \wedge \neg B \Rightarrow \neg A &amp; \text { 拒取式 } \\
+(A \vee B) \wedge \neg B \Rightarrow A &amp; \text { 析取三段论 } \\
+(A \rightarrow B) \wedge (B \rightarrow C) \Rightarrow (A \rightarrow C) &amp; \text { 假言三段论 } \\
+(A \leftrightarrow B) \wedge (B \leftrightarrow C) \Rightarrow (A \leftrightarrow C) &amp; \text { 等价三段论 } \\
+(A \rightarrow B) \wedge (C \rightarrow D) \wedge (A \vee C) \Rightarrow (B \vee D) &amp; \text { 构造性二难 } \\
+(A \rightarrow B) \wedge (C \rightarrow D) \wedge (\neg B \vee \neg D) \Rightarrow (\neg A \vee \neg C) &amp; \text { 破坏性二难 }
+\end{array}
+\]</div>
+<p><mark>推理的书写规范？</mark></p>
+<h2 id="_25">推理规则</h2>
+<ol>
+<li>前提引入规则：在推理过程中，可以随时引入已知的前提。</li>
+<li>结论引入规则：在推理过程中，前面已推出的有效结论 (本演绎的中间结论)都可作为后续推理的前提引用。</li>
+<li>置换规则：在推理过程中，命题公式中的子公式都可以用与之等价的命题公式置换，得到证明的公式序列的另一公式。</li>
+</ol>
+<h2 id="_26">两种特殊证明法</h2>
+<h3 id="_27">附加前提证明法</h3>
+<p>欲证明：</p>
+<p>前提： <span class="arithmatex">\(A_{1}, A_{2}, \ldots, A_{k}\)</span>
+结论： <span class="arithmatex">\(C \rightarrow B\)</span></p>
+<p>等价地证明：</p>
+<p>前提： <span class="arithmatex">\(A_{1}, A_{2}, \ldots, A_{k}, C\)</span>
+结论： <span class="arithmatex">\(B\)</span></p>
+<h3 id="_28">反证法</h3>
+<p>欲证明：</p>
+<p>前提： <span class="arithmatex">\(A_{1}, A_{2}, \ldots, A_{k}\)</span>
+结论： <span class="arithmatex">\(B\)</span></p>
+<p>将 <span class="arithmatex">\(\neg B\)</span> 加入前提, 若推出矛盾, 则得证推理正确。</p>
+<h1 id="_29">谓词逻辑</h1>
+<h2 id="_30">个体词与谓词</h2>
+<h3 id="_31">个体词</h3>
+<p>个体词指可以独立存在的客体，它可以是一个具体的事物，也可以是一个抽象的概念。</p>
+<h3 id="_32">谓词</h3>
+<p>用来刻画个体词的性质或个体词之间关系的词是谓词。</p>
+<h2 id="_33">个体常项与个体变项</h2>
+<p>表示具体的或特定的个体的词称为个体常项，一般用小写英文字母 abc 来表示，表示抽象的或泛指的个体的词称为个体变项，常用小写的英文字母 xyz 表示。个体变项的取值范围称为个体域 (或论域)。特别是，当无特殊声明时，个体域由宇宙间的一切事物组成，称为全总个体域。</p>
+<h2 id="_34">谓词常项与谓词变项</h2>
+<p>表示具体性质或关系的谓词为谓词常项，用大写的英文字母 FGH 表示。表示抽象的或泛指的谓词称为谓词变项，也用大写的英文字母 FGH 表示。</p>
+<h2 id="n">N 元谓词</h2>
+<p>谓词中包含的个体词数称为元数，含有 <span class="arithmatex">\(n (n\ge 1)\)</span> 个个体词的谓词称为 n 元谓词。一元谓词是表示个体词性质的。当 <span class="arithmatex">\(n\ge 2\)</span> 时，n 元谓词表示个体词之间的关系。</p>
+<h2 id="0">0 元谓词</h2>
+<p>不带个体变项的谓词称为 0 元谓词。</p>
+<h2 id="_35">量词</h2>
+<h3 id="_36">全称量词</h3>
+<p>对应日常语言中的“一切”，“所有的”，“任意的”等词，用符号 <span class="arithmatex">\(\forall\)</span> 表示。 <span class="arithmatex">\(\forall x\)</span> 表示对个体域里的所有个体。<span class="arithmatex">\(\forall xF (x)\)</span> 表示个体域里的所有个体都有性质 <span class="arithmatex">\(F\)</span>。 </p>
+<h3 id="_37">存在量词</h3>
+<p>对应日常语言中的“存在着”，“有一个”，“至少有一个”等词，用符号 <span class="arithmatex">\(\exists\)</span> 表示。<span class="arithmatex">\(\exists x\)</span> 表示对个体域里的个体。<span class="arithmatex">\(\exists xF (x)\)</span> 表示存在着个体域中的个体具有性质 <span class="arithmatex">\(F\)</span>。</p>
+<h2 id="_38">特性谓词</h2>
+<p>若一个谓词 <span class="arithmatex">\(P (x)\)</span> 是用来限制个体变元的取值范围，那么称谓词 <span class="arithmatex">\(P (x)\)</span> 为特性谓词。</p>
+<p>对全称量词，特性谓词常作蕴含的前件，如 <span class="arithmatex">\(\forall x (M (x)\to F (x))\)</span></p>
+<p>对存在量词，特性谓词常作合取项，如 <span class="arithmatex">\(\exists x (M (x)\wedge F (x))\)</span></p>
+<ol>
+<li>在不同的个体域中, 命题符号化的形式可能不一样。</li>
+<li>如果事先没有给出个体域, 都应以全总体域为个体域。</li>
+<li>在引入特性谓词后, 使用全称量词和存在量词符号化的形式是不同的。</li>
+<li>当个体域为有限集时, 如 <span class="arithmatex">\(D=\left\{a_{1}, a_{2}, \ldots, a_{n}\right\}\)</span>，对于任意的谓词 <span class="arithmatex">\(A (x)\)</span>，都有</li>
+</ol>
+<div class="arithmatex">\[
+\begin{array}{l}
+\forall x A (x) \Leftrightarrow A\left (a_{1}\right) \wedge A\left (a_{2}\right) \wedge \cdots \wedge A\left (a_{n}\right) \\
+\exists x A (x) \Leftrightarrow A\left (a_{1}\right) \vee A\left (a_{2}\right) \vee \cdots \vee A\left (a_{n}\right)
+\end{array}
+\]</div>
+<ol>
+<li>多个量词同时出现时, 不能随意颠倒它们的顺序。</li>
+</ol>
+<h2 id="_39">字母表</h2>
+<p>字母表如下:</p>
+<ol>
+<li>个体常项:  <span class="arithmatex">\(a, b, c, \ldots, a_{i}, b_{i}, c_{i}, \ldots, i \geq 1\)</span></li>
+<li>个体变项:  <span class="arithmatex">\(x, y, z, \ldots, x_{i}, y_{i}, z_{i}, \ldots, i \geq 1\)</span></li>
+<li>函数符号:  <span class="arithmatex">\(f, g, h, \ldots, f_{i}, g_{i}, h_{i}, \ldots, i \geq 1\)</span></li>
+<li>谓词符号:  <span class="arithmatex">\(F, G, H, \ldots, F_{i}, G_{i}, H_{i}, \ldots, i \geq 1\)</span></li>
+<li>量词符号:  <span class="arithmatex">\(\forall, \exists\)</span></li>
+<li>联结词符号:  <span class="arithmatex">\(\neg, \wedge, \vee, \rightarrow, \leftrightarrow\)</span></li>
+<li>括号与逗号 : <span class="arithmatex">\((, ), ,\)</span></li>
+</ol>
+<h2 id="_40">项</h2>
+<ol>
+<li>个体常项和个体变项是项</li>
+<li>若 <span class="arithmatex">\(\varphi\left (x_{1}, x_{2}, \ldots, x_{n}\right)\)</span> 是任意的 <span class="arithmatex">\(n\)</span> 元函数， <span class="arithmatex">\(t_{1}, t_{2}, \ldots, t_{n}\)</span> 是任意的 <span class="arithmatex">\(n\)</span> 个项，则 <span class="arithmatex">\(\varphi\left (t_{1}, t_{2}, \ldots, t_{n}\right)\)</span> 是项</li>
+<li>只有有限次的使用 (1)、(2)生产的符号才是项</li>
+</ol>
+<h2 id="_41">将自然语言转换成谓词公式的步骤</h2>
+<ol>
+<li>确定个体域，如无特别说明，一般使用全总个体域； </li>
+<li>根据个体域，分析命题中的个体、个体性质以及各个个体间的关系，确定谓词； </li>
+<li>根据表示数量的词确定量词； </li>
+<li>利用联结词将整个命题符号化</li>
+</ol>
+<h2 id="_42">原子公式</h2>
+<p>设 <span class="arithmatex">\(R (x_1 , x_2 , \cdots, x_n)\)</span> 是任意的 n 元谓词 <span class="arithmatex">\((n\ge 1)\)</span>，<span class="arithmatex">\(t_1 , t_2 , \cdots, t_n\)</span> 是任意的 n 个项，则称 <span class="arithmatex">\(R (t_1 , t_2 , \cdots, t_n )\)</span> 是原子公式。原子公式是由项组成的 n 元谓词。</p>
+<h2 id="_43">合式公式</h2>
+<ol>
+<li>原子公式是合式公式</li>
+<li>若 <span class="arithmatex">\(A\)</span> 是合式公式，则 (<span class="arithmatex">\(\neg A\)</span>)也是合式公式</li>
+<li>若 <span class="arithmatex">\(A, B\)</span> 是合式公式，则 <span class="arithmatex">\((A\wedge B), (A\vee B), (A\to B), (A\leftrightarrow B)\)</span> 也是合式公式</li>
+<li>若 <span class="arithmatex">\(A\)</span> 是合式公式，则 <span class="arithmatex">\(\exists xA,\forall xA\)</span> 也是合式公式</li>
+<li>只有有限次地应用 (1)~(4)构成的符号串才是合式公式。在谓词逻辑中合式公式又称为谓词公式，简称为公式。</li>
+</ol>
+<p>在公式 <span class="arithmatex">\(\forall xA\)</span> 和 <span class="arithmatex">\(\exists xA\)</span> 中，称 x 为指导变项，A 为相应量词的辖域。在 <span class="arithmatex">\(\forall x\)</span> 和 <span class="arithmatex">\(\exists x\)</span> 的辖域中，x 的所有出现都称为约束出现，A 中不是约束出现的其他变项的出现均称为是自由出现。</p>
+<p>若公式 A 中无自由出现的个体变项，则称 A 是封闭的合式公式，简称闭式。</p>
+<h2 id="_44">换名规则</h2>
+<p>将一个指导变项及其在辖域中所有约束出现替换成公式中没有出现的个体变项符号。</p>
+<ol>
+<li>改名只对约束出现的变元进行，不对自由出现的变元进行。</li>
+<li>改名必须处处进行，即对某量词约束的变元改名时，必须对原式中该变元的一切受该量词约束的约束进行改名。</li>
+<li>对受某量词约束的变元改名时新名决不能与该量词的辖域中的其它自由变元同名。</li>
+<li>改名前与改名后的约束关系保存不变。</li>
+</ol>
+<h2 id="_45">解释</h2>
+<p>一个解释 <span class="arithmatex">\(I\)</span> 由下面四部分组成：
+1. 非空个体域 <span class="arithmatex">\(D\)</span>。
+2. 对每一个个体常项符号指定一个 <span class="arithmatex">\(D\)</span> 中的元素。
+3. 对每一个函数变项符号指定一个 <span class="arithmatex">\(D\)</span> 上的函数。
+4. 对每一个谓词变项符号指定一个 <span class="arithmatex">\(D\)</span> 上的谓词。</p>
+<p>值得说明的是：</p>
+<ol>
+<li>将公式的个体常项用 <span class="arithmatex">\(I\)</span> 的特定常项代替，函数和谓词用 <span class="arithmatex">\(I\)</span> 的特定函数和谓词代替。</li>
+<li>被解释的公式不一定全部包含解释中的 4 部分。</li>
+<li>闭式在任何解释下都是命题。</li>
+<li>不是闭式的公式在某些解释下也可能是命题。</li>
+</ol>
+<p>对于谓词公式来说：</p>
+<ul>
+<li>永真式 (逻辑有效式)：A 在任何解释和该解释下的任何赋值下都为真</li>
+<li>矛盾式 (永假式)：A 在任何解释和该解释下的任何赋值下都为假</li>
+<li>可满足式：若至少存在一个解释和该解释下的一个赋值使 A 为真</li>
+</ul>
+<p>命题公式中的重言式的代换实例都是永真式，命题公式中的矛盾式的代换实例都是矛盾式。</p>
+<p>设 <span class="arithmatex">\(A, B\)</span> 是谓词逻辑中的两公式，若 <span class="arithmatex">\(A\leftrightarrow B\)</span> 为逻辑有效式，则称 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 是等值的，记作 <span class="arithmatex">\(A\Leftrightarrow B\)</span> ，并称 <span class="arithmatex">\(A\Leftrightarrow B\)</span> 为等值式。</p>
+<h2 id="_46">量词否定等值式</h2>
+<p>设 <span class="arithmatex">\(A (x)\)</span> 是含 <span class="arithmatex">\(x\)</span> 自由出现的公式</p>
+<ol>
+<li><span class="arithmatex">\(\neg \forall x A (x) \Leftrightarrow \exists x \neg A (x)\)</span></li>
+<li><span class="arithmatex">\(\neg \exists x A (x) \Leftrightarrow \forall x \neg A (x)\)</span></li>
+</ol>
+<h2 id="_47">量词辖域收缩与扩张等值式</h2>
+<p>设 <span class="arithmatex">\(A (x)\)</span> 是含 <span class="arithmatex">\(x\)</span> 自由出现的公式，<span class="arithmatex">\(B\)</span> 中不含 <span class="arithmatex">\(x\)</span> 的自由出现</p>
+<h3 id="_48">关于全称量词</h3>
+<ol>
+<li><span class="arithmatex">\(\forall x (A (x) \vee B) \Leftrightarrow \forall x A (x) \vee B\)</span></li>
+<li><span class="arithmatex">\(\forall x (A (x) \wedge B) \Leftrightarrow \forall x A (x) \wedge B\)</span></li>
+<li><span class="arithmatex">\(\forall x (A (x) \rightarrow B) \Leftrightarrow \exists x A (x) \rightarrow B\)</span></li>
+<li><span class="arithmatex">\(\forall x (B \rightarrow A (x)) \Leftrightarrow B \rightarrow \forall x A (x)\)</span></li>
+</ol>
+<h3 id="_49">关于存在量词</h3>
+<ol>
+<li><span class="arithmatex">\(\exists x (A (x) \vee B) \Leftrightarrow \exists x A (x) \vee B\)</span></li>
+<li><span class="arithmatex">\(\exists x (A (x) \wedge B) \Leftrightarrow \exists x A (x) \wedge B\)</span></li>
+<li><span class="arithmatex">\(\exists x (A (x) \rightarrow B) \Leftrightarrow \forall x A (x) \rightarrow B\)</span></li>
+<li><span class="arithmatex">\(\exists x (B \rightarrow A (x)) \Leftrightarrow B \rightarrow \exists x A (x)\)</span></li>
+</ol>
+<h2 id="_50">量词分配等值式</h2>
+<ol>
+<li><span class="arithmatex">\(\forall x (A (x) \wedge B (x)) \Leftrightarrow \forall x A (x) \wedge \forall x B (x)\)</span></li>
+<li><span class="arithmatex">\(\exists x (A (x) \vee B (x)) \Leftrightarrow \exists x A (x) \vee \exists x B (x)\)</span></li>
+</ol>
+<p>注意：<span class="arithmatex">\(\forall\)</span> 对 <span class="arithmatex">\(\vee\)</span> 无分配律，<span class="arithmatex">\(\exists\)</span> 对 <span class="arithmatex">\(\wedge\)</span> 无分配律，即：</p>
+<ol>
+<li><span class="arithmatex">\(\forall x (A (x) \vee B (x)) \nLeftrightarrow \forall x A (x) \vee \forall x B (x)\)</span></li>
+<li><span class="arithmatex">\(\exists x (A (x) \wedge B (x)) \nLeftrightarrow \exists x A (x) \wedge \exists x B (x)\)</span></li>
+</ol>
+<p>下面两等值式成立:</p>
+<ol>
+<li><span class="arithmatex">\(\forall x \forall y A (x, y) \Leftrightarrow \forall y \forall x A (x, y)\)</span></li>
+<li><span class="arithmatex">\(\exists x \exists y A (x, y) \Leftrightarrow \exists y \exists x A (x, y)\)</span></li>
+</ol>
+<p>其中 <span class="arithmatex">\(A (x, y)\)</span> 是任意的含 <span class="arithmatex">\(x, y\)</span> 自由出现的谓词公式。</p>
+<h2 id="_51">前束范式</h2>
+<p>设 <span class="arithmatex">\(A\)</span> 为一谓词公式，若 <span class="arithmatex">\(A\)</span> 具有如下形式：</p>
+<div class="arithmatex">\[
+Q_{1} x_{1} Q_{2} x_{2} \ldots Q_{k} x_{k} B \text {, }
+\]</div>
+<p>则称 <span class="arithmatex">\(A\)</span> 为前束范式，其中每个 <span class="arithmatex">\(Q_{i}(1 \leq i \leq k)\)</span> 为 <span class="arithmatex">\(\forall\)</span> 或 <span class="arithmatex">\(\exists\)</span>，<span class="arithmatex">\(B\)</span> 为不含量词的谓词公式。</p>
+<h2 id="_52">谓词公式化为前束范式的步骤</h2>
+<ol>
+<li>消去联结词 <span class="arithmatex">\(\rightarrow, \leftrightarrow\)</span> 及多余的量词。</li>
+<li>否定深入。</li>
+<li>改名。即利用换名规则、代入规则更换一些变元的名称，以便消除混乱。</li>
+<li>量词前移。即利用量词辖域的收缩与扩张把量词移到前面，这样便可求出与公式等价的前束范式。</li>
+</ol>
+<h1 id="_53">集合</h1>
+<h2 id="_54">概念</h2>
+<p>集合就是一些事物构成的整体，且任一事物是否属于一个集合是完全确定的：要么属于，要么不属于，没有模糊空间。</p>
+<h2 id="_55">集合的表示</h2>
+<p>列举法（花名册法 roster）；谓词表示法（集合构造器 set builder）</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>元素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\varnothing\)</span></td>
+<td>空集</td>
+<td>不包含任何元素的集合</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mathbb{N}\)</span></td>
+<td>自然数集</td>
+<td><span class="arithmatex">\(\{0,1,2,3,\ldots\}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mathbb{Z}\)</span></td>
+<td>整数集</td>
+<td><span class="arithmatex">\(\{\ldots,-3,-2,-1,0,1,2,3, \ldots\}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mathbb{Z}^{+}\)</span></td>
+<td>正整数集</td>
+<td><span class="arithmatex">\(\{1,2,3, \ldots\}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mathbb{Q}\)</span></td>
+<td>有理数集</td>
+<td><span class="arithmatex">\(\{\frac{p}{q}\mid p, q \in \mathbb{Z},  q \neq 0\}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mathbb{R}\)</span></td>
+<td>实数集</td>
+<td>所有实数构成的集合</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mathbb{C}\)</span></td>
+<td>复数集</td>
+<td>所有复数构成的集合</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_56">集合中元素的三个特性</h2>
+<p>确定性：某一元素是否属于一个集合是完全确定的
+互异性：同一集合中的元素是互相不同的
+无序性：构成集合的各元素地位等同，无先后次序</p>
+<h2 id="_57">集合之间的关系</h2>
+<div class="arithmatex">\[
+\begin{array}{ll}
+\text { 包含 (子集) } &amp; A \subseteq B \Leftrightarrow \forall x (x \in A \rightarrow x \in B) \\
+\text { 不包含 } &amp; A \nsubseteq B \Leftrightarrow \exists x (x \in A \wedge x \notin B) \\
+\text { 相等 } &amp; A=B \Leftrightarrow A \subseteq B \wedge B \subseteq A \\
+\text { 不相等 } &amp; A \neq B \\
+\text { 真包含 (真子集) } &amp; A \subset B \Leftrightarrow A \subseteq B \wedge A \neq B \\
+\text { 不真包含 } &amp; A ⊄ B
+\end{array}
+\]</div>
+<p>空集 <span class="arithmatex">\(\varnothing\)</span>：不含任何元素的集合</p>
+<h2 id="_58">集合的大小</h2>
+<p>对于有限集 <span class="arithmatex">\(S\)</span>，如果 <span class="arithmatex">\(S\)</span> 中恰有 n 个不同的元素，则称 n 是 <span class="arithmatex">\(S\)</span> 的基数。<span class="arithmatex">\(S\)</span> 的基数记为 <span class="arithmatex">\(|S|\)</span>。如果 <span class="arithmatex">\(|S|=n\)</span>，则称 <span class="arithmatex">\(S\)</span> 是 n 元集，它的含有 m 个 <span class="arithmatex">\((m\le n)\)</span> 元素的子集称作它的 m 元子集。如果集合不是有限集，则称它是无限的。</p>
+<h2 id="power-set">幂集（Power Set）</h2>
+<p>集合 <span class="arithmatex">\(S\)</span> 的幂集是集合 <span class="arithmatex">\(S\)</span> 所有子集的集合，记作 <span class="arithmatex">\(P (S)\)</span>。</p>
+<div class="arithmatex">\[
+P (S)=\{x | x \subseteq S\}
+\]</div>
+<h2 id="_59">集合包含关系的性质</h2>
+<ol>
+<li>对任意集合 <span class="arithmatex">\(A\)</span>，<span class="arithmatex">\(\varnothing \subseteq A\)</span>。</li>
+<li>自反性：<span class="arithmatex">\(A \subseteq A\)</span>。</li>
+<li>反对称性：若 <span class="arithmatex">\(A \subseteq B\)</span> 且 <span class="arithmatex">\(B \subseteq A\)</span>, 则 <span class="arithmatex">\(A=B\)</span>。</li>
+<li>传递性: 若 <span class="arithmatex">\(A \subseteq B\)</span> 且 <span class="arithmatex">\(B \subseteq C\)</span>, 则 <span class="arithmatex">\(A \subseteq C\)</span>。</li>
+<li>若 <span class="arithmatex">\(|\boldsymbol{A}|=n\)</span>, 则 <span class="arithmatex">\(\boldsymbol{A}\)</span> 有 <span class="arithmatex">\(2^{n}\)</span> 个子集。</li>
+</ol>
+<h2 id="_60">集合的运算</h2>
+<p>并集：<span class="arithmatex">\(A \cup B=\{x / x \in A \vee x \in B\}\)</span>
+交集：<span class="arithmatex">\(A \cap B=\{x / x \in A \wedge x \in B\}\)</span>
+相对补集：<span class="arithmatex">\(A-B=\{x \mid x \in A \wedge x \notin B\}\)</span>
+对称差：<span class="arithmatex">\(A \oplus B=(A-B) \cup (B-A)\)</span></p>
+<h2 id="_61">全集</h2>
+<p>在一个具体问题中，如果所涉及的集合都是某个集合的子集，则称这个集合为全集，记作 E（或 U）. 全集具有相对性在给定问题中，全集包含任何集合，即 <span class="arithmatex">\(\forall A (A\subseteq E)\)</span></p>
+<p>集合中的元素不重复出现，当允许元素重复出现时称作多重集。</p>
+<p>设  A  与  B  为两集合, 称 <span class="arithmatex">\(\{\{a, b\} \mid a \in A \wedge b \in B\}\)</span>  为  A  与  B  的无序积。记作  <span class="arithmatex">\(A \&amp; B\)</span>  。为方便起见, 将无序对 $ {a, b}$  记为  <span class="arithmatex">\((a, b)\)</span> .</p>
+<h2 id="_62">集合运算法则</h2>
+<div class="arithmatex">\[
+\begin{array}{ll}
+\text {幂等律}
+&amp; A \cup A=A \\
+\text {交换律}
+&amp; A \cap A=A \\
+&amp; A \cup B=B \cup A \\
+&amp; A \cap B=B \cap A \\
+\text {结合律}
+&amp; (A \cup B) \cup C=A \cup (B \cup C) \\
+&amp; (A \cap B) \cap C=A \cap (B \cap C) \\
+\text {分配律}
+&amp; A \cup (B \cap C)=(A \cup B) \cap (A \cup C) \\
+&amp; A \cap (B \cup C)=(A \cap B) \cup (A \cap C) \\
+\text {恒等律}
+&amp; A \cup \varnothing=A \\
+&amp; A \cap E=A \\
+\text {支配律}
+&amp; A \cup E=E \\
+\text {互补律}
+&amp; A \cap \varnothing=\varnothing \\
+&amp; A \cup \bar{A}=E \\
+&amp; A \cap \bar{A}=\varnothing \\
+\text {吸收律}
+&amp; A \cup (A \cap B)=A \\
+&amp; A \cap (A \cup B)=A \\
+\text {双重否定律}
+&amp; \overline{(\bar{A})}=A \\
+\end{array}
+\]</div>
+<h2 id="de-morgen">德·摩根 (De Morgen)对偶原理</h2>
+<p>效果：将关于集合的某种性质转移到它的补集上去。</p>
+<p>绝对补集情况：</p>
+<div class="arithmatex">\[
+\begin{array}{l}
+\overline{\boldsymbol{B} \cup C}=\overline{\boldsymbol{B}} \cap \bar{C} \\
+\overline{\boldsymbol{B} \cap C}=\overline{\boldsymbol{B}} \cup \overline{\boldsymbol{C}}
+\end{array}
+\]</div>
+<p>相对补集情况：</p>
+<div class="arithmatex">\[
+\begin{array}{l}
+A-(B \cup C)=(A-B) \cap (A-C) \\
+A-(B \cap C)=(A-B) \cup (A-C)
+\end{array}
+\]</div>
+<h2 id="_63">对称差运算法则</h2>
+<div class="arithmatex">\[
+\begin{array}{l}
+A \oplus A=\varnothing \quad A \oplus \varnothing=A \\
+A \oplus E=\bar{A} \quad A \oplus B=B \oplus A \\
+A \oplus B=(A \cup B) \cap (\bar{A} \cup \bar{B}) \\
+A \oplus B=(A \cap \bar{B}) \cup (B \cap \bar{A}) \\
+A \cup B=(A \oplus B) \cup (A \cap B) \\
+(A \oplus B) \oplus C=A \oplus (B \oplus C) \\
+A \cap (B \oplus C)=(A \cap B) \oplus (A \cap C) \\
+\text { iff } A \oplus B=A \oplus C \text {, then } B=C\\
+A \oplus B=(A-B) \cup (B-A) \\
+A \oplus B=(A \cup B)-(A \cap B) \\
+A-B=A \cap \bar{B}
+\end{array}
+\]</div>
+<h2 id="_64">包含排斥原理</h2>
+<p>设 <span class="arithmatex">\(S\)</span> 为有限集，<span class="arithmatex">\(P_{1}, P_{2}, \ldots, P_{m}\)</span> 是 <span class="arithmatex">\(m\)</span> 种性质，<span class="arithmatex">\(A_{i}\)</span> 是 <span class="arithmatex">\(S\)</span> 中具有性质 <span class="arithmatex">\(P_{i}\)</span> 的元素构成的子集，<span class="arithmatex">\(i=1,2, \ldots, m\)</span>，则 <span class="arithmatex">\(S\)</span> 中不具有性质 <span class="arithmatex">\(P_{1}, P_{2}, \ldots, P_{m}\)</span> 的元素数为：</p>
+<div class="arithmatex">\[
+\begin{array}{l}
+\left|\overline{A_{1}} \cap \overline{A_{2}} \cap \ldots \cap \overline{A_{m}}\right| \\
+=|S|-\sum_{i=1}^{m}\left|A_{i}\right|+\sum_{1 \leq i&lt;j \leq m}\left|A_{i} \cap A_{j}\right|-\sum_{1 \leq i&lt;j&lt;k \leq m}\left|A_{i} \cap A_{j} \cap A_{k}\right|+\ldots \\
++(-1)^{m}\left|A_{1} \cap A_{2} \cap \ldots \cap A_{m}\right|
+\end{array}
+\]</div>
+<p>证明要点：任何元素 <span class="arithmatex">\(x\)</span>，如果不具有任何性质，则对等式右边计数贡献为 1，否则为 0。</p>
+<p>推论：<span class="arithmatex">\(S\)</span> 中至少具有一条性质的元素数为：</p>
+<div class="arithmatex">\[
+\begin{array}{l}
+\left|A_{1} \cup A_{2} \cup \ldots \cup A_{m}\right| \\
+=\sum_{i=1}^{m}\left|A_{i}\right|-\sum_{1 \leq i&lt;j \leq m}\left|A_{i} \cap A_{j}\right|+\sum_{1 \leq i&lt;j&lt;k \leq m}\left|A_{i} \cap A_{j} \cap A_{k}\right|+\ldots \\
++(-1)^{m-1}\left|A_{1} \cap A_{2} \cap \ldots \cap A_{m}\right|
+\end{array}
+\]</div>
+<h2 id="_65">加法法则</h2>
+<p>如果事件 <span class="arithmatex">\(A\)</span> 有 <span class="arithmatex">\(p\)</span> 种产生的方式，事件 <span class="arithmatex">\(B\)</span> 有 <span class="arithmatex">\(q\)</span> 种产生的方式，则事件“A 或 B”有 <span class="arithmatex">\(p+q\)</span> 种产生的方式。</p>
+<h2 id="_66">乘法法则</h2>
+<p>如果事件 <span class="arithmatex">\(A\)</span> 有 <span class="arithmatex">\(p\)</span> 种产生的方式，事件 <span class="arithmatex">\(B\)</span> 有 <span class="arithmatex">\(q\)</span> 种产生的方式，则事件“A 与 B”有 <span class="arithmatex">\(pq\)</span> 种产生的方式。</p>
+<h2 id="_67">排列与组合</h2>
+<p>排列问题：从某个集合中有序地选取若干个元素的问题</p>
+<p>组合问题：从某个集合中无序地选取若干个元素的问题</p>
+<p>这类问题可以根据是否有序、是否允许重复，而划分成 4 种：
+1. 不允许重复的有序选取：集合的排列
+2. 允许重复的有序选取：多重集的排列
+3. 不允许重复的无序选取：集合的组合
+4. 允许重复的无序选取：多重集的组合</p>
+<h3 id="_68">排列</h3>
+<p>从 <span class="arithmatex">\(n\)</span> 个元素的集合 <span class="arithmatex">\(S\)</span> 中有序选取的 <span class="arithmatex">\(r\)</span> 个元素叫做 <span class="arithmatex">\(S\)</span> 的一个 <span class="arithmatex">\(r\)</span> 排列，不同的排列总数记作 <span class="arithmatex">\(P_{n}^{r}\)</span> (或 <span class="arithmatex">\(P (n, r)\)</span>)。如果 <span class="arithmatex">\(r=n\)</span>，则称这个排列为 <span class="arithmatex">\(S\)</span> 的全排列, 简称 <span class="arithmatex">\(S\)</span> 的排列。</p>
+<p>当 <span class="arithmatex">\(r&gt;n\)</span> 时，<span class="arithmatex">\(P_{n}^{r}=0\)</span>。</p>
+<p>对满足 <span class="arithmatex">\(r \leq n\)</span> 的正整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(r\)</span> 有：</p>
+<div class="arithmatex">\[
+P_{n}^{r}=n (n-1) \cdots (n-r+1)
+\]</div>
+<p>一个 <span class="arithmatex">\(n\)</span> 元素 <span class="arithmatex">\(S\)</span> 的环形 <span class="arithmatex">\(r\)</span> 排列数是：</p>
+<div class="arithmatex">\[
+\frac{P_{n}^{r}}{r}=\frac{n !}{r (n-r) !^{\circ}}
+\]</div>
+<p>如果 <span class="arithmatex">\(r=n\)</span>，则 <span class="arithmatex">\(S\)</span> 的环排列数是 <span class="arithmatex">\((n-1)!\)</span>。 </p>
+<p>从 <span class="arithmatex">\(n\)</span> 元集 <span class="arithmatex">\(S\)</span> 中无序选取的 <span class="arithmatex">\(r\)</span> 个元素叫做 <span class="arithmatex">\(S\)</span> 的一个 <span class="arithmatex">\(r\)</span> 组合，不同组合总数记作 <span class="arithmatex">\(C_{n}^{r}\left (C (n, r)\right.\)</span> 或 <span class="arithmatex">\(\left.\left (\begin{array}{c}r \\ n\end{array}\right)\right.)\)</span>。当 <span class="arithmatex">\(n \geq 0\)</span> 时，规定 <span class="arithmatex">\(C_{n}^{0}=1\)</span>。当 <span class="arithmatex">\(r&gt;n\)</span> 时，<span class="arithmatex">\(C_{n}^{r}=0\)</span>。</p>
+<p>对一切 <span class="arithmatex">\(r \leq n\)</span>，有 <span class="arithmatex">\(P_{n}^{r}=r ! C_{n}^{r}\)</span>，即 <span class="arithmatex">\(C_{n}^{r}=\frac{n !}{r !(n-r) !}\)</span>。</p>
+<div class="arithmatex">\[
+\forall r \leq n \text {, 有 } C_{n}^{r}=C_{n}^{n-r}
+\]</div>
+<p>设 <span class="arithmatex">\(S\)</span> 为 <span class="arithmatex">\(n\)</span> 元集, 则 <span class="arithmatex">\(S\)</span> 的子集总数是：</p>
+<div class="arithmatex">\[
+2^{n}=C_{n}^{0}+C_{n}^{1}+\cdots+C_{n}^{n}
+\]</div>
+<p>设多重集 <span class="arithmatex">\(S=\left\{n_{1} \cdot a_{1}, n_{2} \cdot a_{2}, \cdots, n_{k} \cdot a_{k}\right\}\)</span>，从 <span class="arithmatex">\(S\)</span> 中有序选取的 <span class="arithmatex">\(r\)</span> 个元素叫做 <span class="arithmatex">\(S\)</span> 的一个 <span class="arithmatex">\(r\)</span> 排列，当 <span class="arithmatex">\(r=n\)</span> 时，<span class="arithmatex">\(n=n_{1}+n_{2}+\cdots+n_{k}\)</span>，也叫做 <span class="arithmatex">\(S\)</span> 的一个排列。</p>
+<p>设多重集 <span class="arithmatex">\(S=\left\{\infty \cdot a_{1}, \infty \cdot a_{2}, \cdots, \infty \cdot a_{k}\right\}\)</span>，则 <span class="arithmatex">\(S\)</span> 的 <span class="arithmatex">\(r\)</span> 排列数是 <span class="arithmatex">\(k^{r}\)</span>。</p>
+<p>推论：设多重集 <span class="arithmatex">\(S=\left\{n_{1} \cdot a_{1}, n_{2} \cdot a_{2}, \cdots, n_{k} \cdot a_{k}\right\}\)</span>，并且对一切 <span class="arithmatex">\(i=1,2, \cdots, k\)</span> 有 <span class="arithmatex">\(n_{i} \geq r\)</span>，则 <span class="arithmatex">\(S\)</span> 的 <span class="arithmatex">\(r\)</span> 排列数是 <span class="arithmatex">\(k^{r}\)</span>。</p>
+<p>设多重集 <span class="arithmatex">\(S=\left\{n_{1} \cdot a_{1}, n_{2} \cdot a_{2}, \cdots, n_{k} \cdot a_{k}\right\}\)</span>，且 <span class="arithmatex">\(n=n_{1}+   n_{2}+\cdots+n_{k}\)</span>，则 <span class="arithmatex">\(S\)</span> 的排列数等于 <span class="arithmatex">\(\frac{n !}{n_{1} ! N_{2} ! \cdots n_{k} !}\)</span>。简记为 <span class="arithmatex">\(\left (\begin{array}{c}n \\ n_{1} n_{2} \cdots n_{k}\end{array}\right)\)</span>。</p>
+<p>设多重集 <span class="arithmatex">\(S=\left\{n_{1} \cdot a_{1}, n_{2} \cdot a_{2}, \cdots, n_{k} \cdot a_{k}\right\}\)</span>，<span class="arithmatex">\(S\)</span> 的含有 <span class="arithmatex">\(r\)</span> 个元素的子多重集叫做 <span class="arithmatex">\(S\)</span> 的 <span class="arithmatex">\(r\)</span> 组合。</p>
+<p>设多重集 <span class="arithmatex">\(S=\left\{\infty \cdot a_{1}, \infty \cdot a_{2}, \cdots, \infty \cdot a_{k}\right\}\)</span>，则 <span class="arithmatex">\(S\)</span> 的 <span class="arithmatex">\(r\)</span> 组合数是 <span class="arithmatex">\(C_{k+r-1}^{r}\)</span>。</p>
+<p>推论 1：设多重集 <span class="arithmatex">\(S=\left\{n_{1} \cdot a_{1}, n_{2} \cdot a_{2}, \cdots, n_{k} \cdot a_{k}\right\}\)</span>，且对一切 <span class="arithmatex">\(i=1,2, \cdots, k\)</span> 有 <span class="arithmatex">\(n_{i} \geq r\)</span>，则 <span class="arithmatex">\(S\)</span> 的 <span class="arithmatex">\(r\)</span> 组合数是 <span class="arithmatex">\(C_{k+r-1}^{r}\)</span>。</p>
+<p>推论 2：设多重集 <span class="arithmatex">\(S=\left\{\infty \cdot a_{1}, \infty \cdot a_{2}, \cdots, \infty \cdot a_{k}\right\}, r \geq k\)</span>，则 <span class="arithmatex">\(S\)</span> 中每个元素至少取一个的 <span class="arithmatex">\(r\)</span> 组合数是 <span class="arithmatex">\(C_{r-1}^{k-1}\)</span>。</p>
+<p>设 <span class="arithmatex">\(S=\left\{n_{1} \cdot a_{1}, n_{2} \cdot a_{2}, \cdots, n_{k} \cdot a_{k}\right\}\)</span>，<span class="arithmatex">\(n=n_{1}+n_{2}+\cdots+n_{k}\)</span>，则 <span class="arithmatex">\(S\)</span> 的 <span class="arithmatex">\(r\)</span> 组合数 <span class="arithmatex">\(N\)</span> 满足：</p>
+<ol>
+<li>若 <span class="arithmatex">\(r&gt;n\)</span>，则 <span class="arithmatex">\(N=0\)</span>。</li>
+<li>若 <span class="arithmatex">\(r=n\)</span>，则  <span class="arithmatex">\(N=1\)</span>。</li>
+<li>若 <span class="arithmatex">\(r&lt;n\)</span>，且对一切 <span class="arithmatex">\(i=1,2, \cdots, k\)</span> 有 <span class="arithmatex">\(n_{i} \geq r\)</span>，则 <span class="arithmatex">\(N=C_{k+r-1}^{r}\)</span>。</li>
+<li>若 <span class="arithmatex">\(r&lt;n\)</span>，且存在着某个 <span class="arithmatex">\(n_{i}&lt;r\)</span>，则对 <span class="arithmatex">\(N\)</span> 没有一般的求解公式，可以用包含排斥原理或其他的组合数学方法求解。</li>
+</ol>
+<h2 id="_69">映射</h2>
+<p>设 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 是两个非空集合。如果按照一定的法则 <span class="arithmatex">\(f\)</span>，对于 <span class="arithmatex">\(A\)</span> 中的每个元素 <span class="arithmatex">\(x\)</span>，都存在 <span class="arithmatex">\(B\)</span> 中的一个确定的元素 <span class="arithmatex">\(y\)</span> 与 <span class="arithmatex">\(x\)</span> 相对应，那么称 <span class="arithmatex">\(f\)</span> 是定义在 <span class="arithmatex">\(A\)</span> 上取值于 <span class="arithmatex">\(B\)</span> 中的一个映射，记作 <span class="arithmatex">\(f: A→B\)</span>，<span class="arithmatex">\(y\)</span> 称为 <span class="arithmatex">\(x\)</span> 在映射 <span class="arithmatex">\(f\)</span> 下的象，记作 <span class="arithmatex">\(y = f (x)\)</span>。对于固定的 <span class="arithmatex">\(y\)</span>，<span class="arithmatex">\(A\)</span> 中适合关系式 <span class="arithmatex">\(y = f (x)\)</span> 的 <span class="arithmatex">\(x\)</span> 的全体称为 <span class="arithmatex">\(y\)</span> 的原象，<span class="arithmatex">\(A\)</span> 称为映射 <span class="arithmatex">\(f\)</span> 的定义域，<span class="arithmatex">\(f (A)=\{f (x) | x\in A\}\)</span> 称为映射 <span class="arithmatex">\(f\)</span> 的值域。</p>
+<p>若 <span class="arithmatex">\(B\)</span> 是一个数集，此时映射 <span class="arithmatex">\(f\)</span> 称为泛函，即定义在集 <span class="arithmatex">\(A\)</span> 上的函数；若 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 都是数集，<span class="arithmatex">\(f\)</span> 就是通常的函数。</p>
+<p>设 <span class="arithmatex">\(X\)</span> 为任一集合，<span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(X\)</span> 的一个子集，定义</p>
+<div class="arithmatex">\[
+\chi_{A}(x)=\left\{\begin{array}{ll}
+0, &amp; x \notin A \\
+1, &amp; x \in A
+\end{array}\right.
+\]</div>
+<p>则映射 <span class="arithmatex">\(\chi_{A}: X \rightarrow\{0,1\}\)</span> 是集合 <span class="arithmatex">\(X\)</span> 上的一个函数，称为 <span class="arithmatex">\(A\)</span> 的特征函数。</p>
+<p>设有映射 <span class="arithmatex">\(f: A \rightarrow B\)</span>。若 <span class="arithmatex">\(f (A)=B\)</span>，即对 <span class="arithmatex">\(B\)</span> 中的每个元素 <span class="arithmatex">\(y\)</span> 都有 <span class="arithmatex">\(A\)</span> 中的元素 <span class="arithmatex">\(x\)</span>，使 <span class="arithmatex">\(f (x)=y\)</span>，则称 <span class="arithmatex">\(f\)</span> 是一个满射，或 <span class="arithmatex">\(A\)</span> 到 <span class="arithmatex">\(B\)</span> 上的映射；若对于 <span class="arithmatex">\(f (A)\)</span> 中的每个元 <span class="arithmatex">\(y\)</span>，都有 <span class="arithmatex">\(A\)</span> 中的唯一的元 <span class="arithmatex">\(x\)</span>，使 <span class="arithmatex">\(f (x)=y\)</span>，或者等价地，对于 <span class="arithmatex">\(A\)</span> 中的任意不同元 <span class="arithmatex">\(x_{1}\)</span> 与 <span class="arithmatex">\(x_{2}\)</span>，都有 <span class="arithmatex">\(f\left (x_{1}\right) \neq f\left (x_{2}\right)\)</span>，则称 <span class="arithmatex">\(f\)</span> 是一个单射；若 <span class="arithmatex">\(f\)</span> 既是满射，又是单射，即对于 <span class="arithmatex">\(B\)</span> 中的每个元 <span class="arithmatex">\(y\)</span>，都有 <span class="arithmatex">\(A\)</span> 中的唯一元 <span class="arithmatex">\(x\)</span>，使 <span class="arithmatex">\(f (x)=y\)</span>，则称 <span class="arithmatex">\(f\)</span> 是一个双射或 <span class="arithmatex">\(A\)</span> 到 <span class="arithmatex">\(B\)</span> 上的一一映射。</p>
+<p>设 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 是两个非空集合，若存在一个从 <span class="arithmatex">\(A\)</span> 到 <span class="arithmatex">\(B\)</span> 上的一一映射，则称集合 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 是对等的，或称 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 是一一对应的，记作 <span class="arithmatex">\(A\sim B\)</span>。</p>
+<p>设 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 是两个集合，如果 <span class="arithmatex">\(A \sim B\)</span>，那么就称 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 具有相同的势。集合 <span class="arithmatex">\(A\)</span> 的势记为 <span class="arithmatex">\(\overset{=}{A}\)</span>。</p>
+<p>对等关系具有下述基本性质：</p>
+<ol>
+<li>自反性：<span class="arithmatex">\(A \sim A\)</span>。</li>
+<li>对称性：若 <span class="arithmatex">\(A \sim B\)</span>，则 <span class="arithmatex">\(B \sim A\)</span>。</li>
+<li>传递性：若 <span class="arithmatex">\(A \sim B\)</span>，<span class="arithmatex">\(B \sim C\)</span>，则 <span class="arithmatex">\(A \sim C\)</span>。</li>
+</ol>
+<p>因此可以将势相同的集合归于同一类。</p>
+<p>设 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 是两个集合, 若 <span class="arithmatex">\(A\)</span> 对等于 <span class="arithmatex">\(B\)</span> 的一个子集，则称 <span class="arithmatex">\(A\)</span> 的势小于或等于 <span class="arithmatex">\(B\)</span> 的势 (或 <span class="arithmatex">\(B\)</span> 的势大于或等于 <span class="arithmatex">\(A\)</span> 的势)，记作 <span class="arithmatex">\(A \leq \bar{B}\)</span> (或 <span class="arithmatex">\(B \geq A\)</span>)。若 <span class="arithmatex">\(A \leq B\)</span> 且 <span class="arithmatex">\({A}\)</span> 与 <span class="arithmatex">\({B}\)</span> 不对等，则称 <span class="arithmatex">\(A\)</span> 的势小于 <span class="arithmatex">\(B\)</span> 的势（或 <span class="arithmatex">\(B\)</span> 的势大于 <span class="arithmatex">\(A\)</span> 的势），记作 <span class="arithmatex">\(\overset{=}{A}&lt;\overset{=}{B}\)</span>（或 <span class="arithmatex">\(\overset{=}{B}&gt;\overset{=}{A}\)</span>）。</p>
+<p>凡与正整数对等的集合称为可数集 (或可列集)。</p>
+<p>可数集的势用 <span class="arithmatex">\(\aleph_0\)</span> 表示，读作“阿列夫零”。</p>
+<p>任意的无限集都有一个可数子集</p>
+<p>可数集的子集或者是有限集，或者是可数集</p>
+<p>推论可数集是无限集中具有最小势的一类集。</p>
+<p>可数个可数集的并是可数集</p>
+<p>可数集是无限集中最简单的一类集，然而，并非任何无限集都是可数集。</p>
+<p>区间 <span class="arithmatex">\([0,1]\)</span> 中的点的全体构成一个不可数集。</p>
+<p>区间 <span class="arithmatex">\([0,1]\)</span> 的点构成的集合的势称为连续统的势，记作 <span class="arithmatex">\(\aleph\)</span> (读作“阿列夫”)</p>
+<p>实数集的势为 <span class="arithmatex">\(\aleph\)</span></p>
+<p>伯恩斯坦（Bernstein）定理：设 A 与 B 是两个非空集。若 <span class="arithmatex">\(A_{0} \subset A, B_{0} \subset B\)</span>，且 <span class="arithmatex">\(A \sim B_{0}, B \sim A_{0}\)</span>，则 <span class="arithmatex">\(A \sim B\)</span>。</p>
+<p>无理数集的势为 <span class="arithmatex">\(\aleph\)</span>。</p>
+<p>康托猜想或连续统假设：在 <span class="arithmatex">\(\aleph_0\)</span> 与 <span class="arithmatex">\(\aleph\)</span> 之间不存在另一种势。</p>
+<p>非空集合 <span class="arithmatex">\(A\)</span> 的幂集的势比 <span class="arithmatex">\(A\)</span> 本身的势大。</p>
+<h2 id="_70">闭区间套定理</h2>
+<p>设 <span class="arithmatex">\(\left\{\left[a_{n}, b_{n}\right]\right\}\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 中的闭区间列 (<span class="arithmatex">\(n \geq 1\)</span>)，如果满足：</p>
+<ol>
+<li><span class="arithmatex">\(\left[a_{1}, b_{1}\right] \supset\left[a_{2}, b_{2}\right] \supset \ldots \supset\left[a_{n}, b_{n}\right] \supset \ldots\)</span></li>
+<li><span class="arithmatex">\(\lim _{n \rightarrow \infty}\left (b_{n}-a_{n}\right)=0\)</span></li>
+</ol>
+<p>则存在唯一实数 <span class="arithmatex">\(\xi\)</span> 属于所有闭区间 <span class="arithmatex">\(\left[a_{n}, b_{n}\right], n \geq 1\)</span>。</p>
+<h2 id="cantor"><mark>Cantor 集</mark></h2>
+<p>Cantor 集的势为 <span class="arithmatex">\(\aleph\)</span>。</p>
+<blockquote>
+<p>因为 Cantor 集在构造的过程中，去掉中间保留左右两侧，用 L 与 R 表示则对于 Cantor 集中的点，LR 交替出现，若 L 表示为 0，R 表示为 1，同时在前面加上 <span class="arithmatex">\(0.\)</span>，Cantor 集中的点可以表示为二进制小数，也就与 <span class="arithmatex">\([0,1]\)</span> 一一对应，所以与 <span class="arithmatex">\([0,1]\)</span> 等势，势为 <span class="arithmatex">\(\aleph\)</span>。</p>
+</blockquote>
+<h1 id="_71">图</h1>
+<h2 id="_72">无向图</h2>
+<p>无向图 <span class="arithmatex">\(G\)</span> 是一个二元组，其中：</p>
+<ol>
+<li><span class="arithmatex">\(G\)</span> 的顶点集 <span class="arithmatex">\(V\)</span> 是非空有穷集合，其元素称为顶点或节点。</li>
+<li><span class="arithmatex">\(G\)</span> 的边集 <span class="arithmatex">\(E\)</span> 为 <span class="arithmatex">\(V\&amp;V\)</span> 的多重子集，其元素称为无向边，简称边。</li>
+</ol>
+<h2 id="_73">有向图</h2>
+<p>有向图 <span class="arithmatex">\(D\)</span> 是一个二元组，其中：
+1. 顶点集 <span class="arithmatex">\(V\)</span> 是非空有穷集合，其元素称为顶点或节点。
+2. 边集 <span class="arithmatex">\(E\)</span> 为卡氏积 <span class="arithmatex">\(V\times V\)</span> 的多重子集，其元素称为有向边，简称边。
+3. D 的基图：用无向边代替有向边。</p>
+<p><span class="arithmatex">\(n\)</span> 阶图：<span class="arithmatex">\(n\)</span> 个顶点的图。
+零图：<span class="arithmatex">\(E=\varnothing\)</span>。
+平凡图：<span class="arithmatex">\(1\)</span> 阶零图。
+空图：<span class="arithmatex">\(V=\varnothing\)</span>。</p>
+<p>设 <span class="arithmatex">\(e=(u, v)\)</span> 是无向图 <span class="arithmatex">\(G=&lt;V,E&gt;\)</span> 的一条边，称 <span class="arithmatex">\(u, v\)</span> 为 <span class="arithmatex">\(e\)</span> 的端点，<span class="arithmatex">\(e\)</span> 与 <span class="arithmatex">\(u (v)\)</span> 关联。若 <span class="arithmatex">\(u\neq v\)</span>，则称 <span class="arithmatex">\(e\)</span> 与 <span class="arithmatex">\(u (v)\)</span> 的关联次数为 <span class="arithmatex">\(1\)</span>；若 <span class="arithmatex">\(u=v\)</span>，则称 <span class="arithmatex">\(e\)</span> 为环，此时称 <span class="arithmatex">\(e\)</span> 与 <span class="arithmatex">\(u\)</span> 的关联次数为 <span class="arithmatex">\(2\)</span>；若 <span class="arithmatex">\(w\)</span> 不是 <span class="arithmatex">\(e\)</span> 端点，则称 <span class="arithmatex">\(e\)</span> 与 <span class="arithmatex">\(w\)</span> 的关联次数为 <span class="arithmatex">\(0\)</span>。无边关联的顶点称作孤立点。</p>
+<p>设 <span class="arithmatex">\(e=(u, v)\)</span> 是有向图 <span class="arithmatex">\(D=&lt;V,E&gt;\)</span> 的一条有向边，<span class="arithmatex">\(u\)</span> 为 <span class="arithmatex">\(e\)</span> 的始点，<span class="arithmatex">\(v\)</span> 为 <span class="arithmatex">\(e\)</span> 的终点，称 <span class="arithmatex">\(u, v\)</span> 为 <span class="arithmatex">\(e\)</span> 的端点，<span class="arithmatex">\(e\)</span> 与 <span class="arithmatex">\(u (v)\)</span> 关联。无边关联的顶点称作孤立点。若有一条有向边的始点与终点重合，称该边为环。</p>
+<p><span class="arithmatex">\(G=&lt;V,E&gt;\)</span> 为无向图，<span class="arithmatex">\(v\in V\)</span>：</p>
+<ul>
+<li><span class="arithmatex">\(v\)</span> 的度数 (度) <span class="arithmatex">\(d (v)\)</span>：<span class="arithmatex">\(v\)</span> 作为边的端点的次数之和。</li>
+<li>悬挂顶点：度数为 <span class="arithmatex">\(1\)</span> 的顶点。</li>
+<li>悬挂边：与悬挂顶点关联的边。</li>
+<li><span class="arithmatex">\(G\)</span> 的最大度 <span class="arithmatex">\(\Delta (G)=\max\{d (v)|v\in V\}\)</span>。</li>
+<li><span class="arithmatex">\(G\)</span> 的最小度 <span class="arithmatex">\(\delta (G)=\min\{d (v)|v\in V\}\)</span>。</li>
+</ul>
+<h2 id="_74">顶点的度数</h2>
+<ul>
+<li><span class="arithmatex">\(v\)</span> 的出度 <span class="arithmatex">\(d^{+}(v)\)</span>：<span class="arithmatex">\(v\)</span> 作为边的始点次数之和</li>
+<li><span class="arithmatex">\(v\)</span> 的入度 <span class="arithmatex">\(d^{-}(v)\)</span>：<span class="arithmatex">\(v\)</span> 作为边的终点次数之和</li>
+<li><span class="arithmatex">\(v\)</span> 的度数 (度) <span class="arithmatex">\(d (v)\)</span>：<span class="arithmatex">\(v\)</span> 作为边的端点次数之和</li>
+</ul>
+<div class="arithmatex">\[
+D (v)=d^{+}(v)+d^{d}(v)
+\]</div>
+<p><span class="arithmatex">\(D\)</span> 的最大出度：<span class="arithmatex">\(\Delta^{+}(D)=\max \left\{d^{+}(v) \mid v \in V\right\}\)</span>。
+<span class="arithmatex">\(D\)</span> 的最小出度：<span class="arithmatex">\(\delta^{+}(D)=\min \left\{d^{+}(v) \mid v \in V\right\}\)</span>。
+<span class="arithmatex">\(D\)</span> 的最大入度：<span class="arithmatex">\(\Delta^{-}(D)=\max \left\{d^{-}(v) \mid v \in V\right\}\)</span>。
+<span class="arithmatex">\(D\)</span> 的最小入度：<span class="arithmatex">\(\delta^{-}(D)=\min \left\{d^{-}(v) \mid v \in V\right\}\)</span>。
+<span class="arithmatex">\(D\)</span> 的最大度：<span class="arithmatex">\(\Delta (D)=\max \{d (v) \mid v \in V\}\)</span>。
+<span class="arithmatex">\(D\)</span> 的最小度：<span class="arithmatex">\(\delta (D)=\min \{d (v) \mid v \in V\}\)</span>。</p>
+<p>设图 <span class="arithmatex">\(G=&lt;V, E&gt;\)</span> 为无向图或有向图，<span class="arithmatex">\(V=\left\{v_{1}, V_{2}, \ldots, V_{n}\right\}\)</span>，边数 <span class="arithmatex">\(|E|=m\)</span>，则：</p>
+<div class="arithmatex">\[
+\sum_{i=1}^{n} d\left (v_{i}\right)=2 m .
+\]</div>
+<p>推论：任何图 (无向或有向)，度数为基数的顶点个数是偶数。</p>
+<p>设有向图 <span class="arithmatex">\(D=&lt;V, E&gt;\)</span>，<span class="arithmatex">\(V=\left\{v_{1}, V_{2}, \ldots, V_{n}\right\}\)</span>，<span class="arithmatex">\(|E|=m\)</span>，则：</p>
+<div class="arithmatex">\[
+\sum_{i=1}^{n} d^{+}\left (v_{i}\right)=\sum_{i=1}^{n} d^{-}\left (v_{i}\right)=m
+\]</div>
+<h2 id="_75">多重图与简单图</h2>
+<ol>
+<li>在无向图中，如果有 2 条或 2 条以上的边关联同一对顶点，则称这些边为平行边，平行边的条数称为重数。</li>
+<li>在有向图中，如果有 2 条或 2 条以上的边具有相同的始点和终点，则称这些边为有向平行边，简称平行边，平行边的条数称为重数。</li>
+<li>含平行边的图称为多重图。</li>
+<li>既无平行边也无环的图称为简单图。</li>
+</ol>
+<h2 id="_76">完全图</h2>
+<p>设 <span class="arithmatex">\(G=&lt;V, E&gt;\)</span> 是 <span class="arithmatex">\(n\)</span> 阶无向简单图，若 <span class="arithmatex">\(G\)</span> 中任何顶点都与其余的 <span class="arithmatex">\(n-1\)</span> 个顶点相邻，则称 <span class="arithmatex">\(G\)</span> 为 <span class="arithmatex">\(n\)</span> 阶无向完全图，记作 <span class="arithmatex">\(K_{n}\)</span>。设 <span class="arithmatex">\(D=&lt;V, E&gt;\)</span> 是 <span class="arithmatex">\(n\)</span> 阶有向简单图，若对于任意的顶点 <span class="arithmatex">\(u, v \in V (u \neq v)\)</span>，既有有向边 <span class="arithmatex">\(\langle u, v\rangle\)</span>，又有 <span class="arithmatex">\(\langle v, u\rangle\)</span>，则称 <span class="arithmatex">\(D\)</span> 为 <span class="arithmatex">\(n\)</span> 阶有向完全图。</p>
+<h2 id="_77">子图</h2>
+<p>设 <span class="arithmatex">\(G=&lt;V, E&gt;\)</span>，<span class="arithmatex">\(G^{\prime}=&lt; V^{\prime}, E^{\prime}&gt;\)</span> 是两个图：</p>
+<ol>
+<li>若 <span class="arithmatex">\(V^{\prime} \subseteq V\)</span> 且 <span class="arithmatex">\(E^{\prime} \subseteq E\)</span>，则称 <span class="arithmatex">\(G^{\prime}\)</span> 为 <span class="arithmatex">\(G\)</span> 的子图，<span class="arithmatex">\(G\)</span> 为 <span class="arithmatex">\(G^{\prime}\)</span> 的母图，记作 <span class="arithmatex">\(G^{\prime} \subseteq G\)</span>。</li>
+<li>若 <span class="arithmatex">\(G^{\prime} \subseteq G\)</span> 且 <span class="arithmatex">\(V^{\prime}=V\)</span>，则称 <span class="arithmatex">\(G^{\prime}\)</span> 为 <span class="arithmatex">\(G\)</span> 的生成子图。</li>
+<li>若 <span class="arithmatex">\(G^{\prime} \subseteq G\)</span> 且 <span class="arithmatex">\(G^{\prime} \neq G\)</span>，称 <span class="arithmatex">\(G^{\prime}\)</span> 为 <span class="arithmatex">\(G\)</span> 的真子图。</li>
+<li>设 <span class="arithmatex">\(V_{1} \subseteq V\)</span> 且 <span class="arithmatex">\(V_{1} \neq \varnothing\)</span>，以 <span class="arithmatex">\(V_{1}\)</span> 为顶点集，以两端点都在 <span class="arithmatex">\(V_{1}\)</span> 中的所有边为边集的 <span class="arithmatex">\(G\)</span> 的子图称作 <span class="arithmatex">\(V_{1}\)</span> 的导出子图，记作 <span class="arithmatex">\(G\left[V_{1}\right]\)</span>。 </li>
+<li>设 <span class="arithmatex">\(E_{1} \subseteq E\)</span> 且 <span class="arithmatex">\(E_{1} \neq \varnothing\)</span>，以 <span class="arithmatex">\(E_{1}\)</span> 为边集，以 <span class="arithmatex">\(E_{1}\)</span> 中边关联的所有顶点为顶点集的 <span class="arithmatex">\(G\)</span> 的子图称作 <span class="arithmatex">\(E_{1}\)</span> 的导出子图，记作 <span class="arithmatex">\(G\left[E_{1}\right]\)</span>。</li>
+</ol>
+<h2 id="_78">补图</h2>
+<p>设 <span class="arithmatex">\(G=&lt;V, E&gt;\)</span> 为 <span class="arithmatex">\(n\)</span> 阶无向简单图，<span class="arithmatex">\(G\)</span> 的补图 <span class="arithmatex">\(\bar{G}\)</span> 定义如下：<span class="arithmatex">\(\bar{G}=\langle V, \bar{E}&gt;\)</span>，其中 <span class="arithmatex">\(\bar{E}=\{(u, v) \mid u, V \in V, (u, v) \notin E\}\)</span>。</p>
+<h2 id="_79">同构</h2>
+<p>设两个无向图 <span class="arithmatex">\(G_{1}=&lt;V_{1}, E_{1}&gt;\)</span>，<span class="arithmatex">\(G_{2}=&lt;V_{2}, E_{2}&gt;\)</span>，如果存在双射函数 <span class="arithmatex">\(f : V_{1} \rightarrow V_{2}\)</span>，使得对于任意的 <span class="arithmatex">\(e=(u, v) \in E_{1}\)</span>，当且仅当 <span class="arithmatex">\(e^{\prime}=(f (u) ,  f (v)) \in E_{2}\)</span>，并且 <span class="arithmatex">\(e\)</span> 与 <span class="arithmatex">\(e^{\prime}\)</span> 的重数相同，则称 <span class="arithmatex">\(G_{1}\)</span> 与 <span class="arithmatex">\(G_{2}\)</span> 是同构的，记作 <span class="arithmatex">\(G_{1} \cong G_{2}\)</span>。</p>
+<p>必要条件：</p>
+<ol>
+<li>边数相同，顶点数相同</li>
+<li>度数列相同 (不计度数的顺序)</li>
+<li>对应顶点的关联集及邻域的元素个数相同</li>
+</ol>
+<h2 id="_80">通路与回路</h2>
+<p>设 <span class="arithmatex">\(G\)</span> 中顶点与边的交替序列 <span class="arithmatex">\(\Gamma=V_{0} e_{1} V_{1} e_{2} \cdots e_{l} V_{l}\)</span>，若 <span class="arithmatex">\(1 \leq i \leq 1, v_{i-1}, V_{i}\)</span> 是 <span class="arithmatex">\(e_{i}\)</span> 的端点 (当 <span class="arithmatex">\(G\)</span> 是有向图，要求 <span class="arithmatex">\(v_{i-1}\)</span> 是 <span class="arithmatex">\(e_i\)</span> 始点，<span class="arithmatex">\(v_{i}\)</span> 是 <span class="arithmatex">\(e_{i}\)</span> 终点)，则称 <span class="arithmatex">\(\Gamma\)</span> 为顶点 <span class="arithmatex">\(v_{0}\)</span> 到 <span class="arithmatex">\(v_{l}\)</span> 的通路，<span class="arithmatex">\(v_{0}\)</span> 和 <span class="arithmatex">\(v_{l}\)</span> 分别称为此通路的起点和终点，<span class="arithmatex">\(\Gamma\)</span> 中边的数目 <span class="arithmatex">\(l\)</span> 为称为 <span class="arithmatex">\(\Gamma\)</span> 的长度。又若 <span class="arithmatex">\(v_{0}=v_{1}\)</span>，则称 <span class="arithmatex">\(\Gamma\)</span> 为回路。</p>
+<p><span class="arithmatex">\(\Gamma\)</span> 中所有边互不相同，则称 <span class="arithmatex">\(\Gamma\)</span> 为简单通路，当 <span class="arithmatex">\(v_{0}=v_{l}\)</span> 时，称此简单通路为简单回路。</p>
+<p><span class="arithmatex">\(\Gamma\)</span> 中除 <span class="arithmatex">\(v_{0}, v_{l}\)</span> 外所有顶点互不相同，所有的边也互不相同，则称此通路为初级通路或路径，当 <span class="arithmatex">\(v_{0}=v_{l}\)</span> 时，称此通路为初级回路或圈。</p>
+<p>有边重复出现的通路称为复杂通路吗，有边重复出现的回路称为复杂回路。</p>
+<p>表示方法：</p>
+<ol>
+<li>用顶点和边的交替序列 (定义)，如 <span class="arithmatex">\(\Gamma=V_{0} e_{1} V_{1} e_{2} \ldots e_{1} V_{l}\)</span>。</li>
+<li>用边的序列，如 <span class="arithmatex">\(\Gamma=e_{1} e_{2} \ldots e_{l}\)</span>。</li>
+<li>简单图中，用顶点的序列，如 <span class="arithmatex">\(\Gamma=v_{0} v_{1} \ldots V_{l}\)</span>。</li>
+<li>非简单图中, 可用混合表示法, 如 <span class="arithmatex">\(\Gamma=v_{0} v_{1} e_{2} v_{2} e_{5} v_{3} v_{4} v_{5}\)</span>。</li>
+</ol>
+<p>无向图：环是长度为 <span class="arithmatex">\(1\)</span> 的圈，两条平行边构成长度为 <span class="arithmatex">\(2\)</span> 的圈。</p>
+<p>有向图：环和两条方向相反边构成的回路分别为长度为 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(2\)</span> 的圈。</p>
+<p>在无向简单图中，所有圈的长度 <span class="arithmatex">\(\geq 3\)</span>；在有向简单图中，所有圈的长度 <span class="arithmatex">\(\geq 2\)</span>。</p>
+<h3 id="_81">圈的个数</h3>
+<p>定义意义下：</p>
+<ul>
+<li>在无向图中，一个长度为 <span class="arithmatex">\(l\)</span> (<span class="arithmatex">\(l\ge 3\)</span>)的圈看作 <span class="arithmatex">\(2 l\)</span> 个不同的圈。</li>
+<li>在有向图中，一个长度为 <span class="arithmatex">\(l\)</span> (<span class="arithmatex">\(l\ge 3\)</span>)的圈看作 <span class="arithmatex">\(l\)</span> 个不同的圈。</li>
+</ul>
+<p>同构意义下：</p>
+<ul>
+<li>所有长度相同的圈都是同构的，因而是 1 个圈。</li>
+</ul>
+<p>在一个 <span class="arithmatex">\(n\)</span> 阶图 <span class="arithmatex">\(G\)</span> 中，若从顶点 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(V (u \neq V)\)</span> 存在通路，则从 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v\)</span> 存在长度小于等于 <span class="arithmatex">\(n-1\)</span> 的通路。</p>
+<p>推论：在一个 <span class="arithmatex">\(n\)</span> 阶图 <span class="arithmatex">\(G\)</span> 中，若从顶点 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v (u \neq v)\)</span> 存在通路，则从 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v\)</span> 存在长度小于等于 <span class="arithmatex">\(n-1\)</span> 的初级通路。</p>
+<p>在一个 <span class="arithmatex">\(n\)</span> 阶图 <span class="arithmatex">\(G\)</span> 中，若存在 <span class="arithmatex">\(v\)</span> 到自身的回路，则一定存在 <span class="arithmatex">\(v\)</span> 到自身长度小于等于 <span class="arithmatex">\(n\)</span> 的回路。</p>
+<p>在一个 <span class="arithmatex">\(n\)</span> 阶图 <span class="arithmatex">\(G\)</span> 中，若存在 <span class="arithmatex">\(v\)</span> 到自身的简单回路，则存在 <span class="arithmatex">\(v\)</span> 到自身长度小于等于 <span class="arithmatex">\(n\)</span> 的初级回路。</p>
+<p>在一个无向图 <span class="arithmatex">\(G\)</span> 中，若从顶点 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v\)</span> 存在通路（当然从 <span class="arithmatex">\(v\)</span> 到 <span class="arithmatex">\(u\)</span> 也存在通路），则称 <span class="arithmatex">\(u\)</span> 与 <span class="arithmatex">\(v\)</span> 是连通的。规定任何顶点与自身总是连通的。</p>
+<p>在一个有向图 <span class="arithmatex">\(D\)</span> 中，若从顶点 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v\)</span> 存在通路，则称 <span class="arithmatex">\(u\)</span> 可达 <span class="arithmatex">\(v\)</span> 。规定任何顶点到自身总是可达的。</p>
+<p>若无向图 <span class="arithmatex">\(G\)</span> 是平凡图或 <span class="arithmatex">\(G\)</span> 中任意两顶点都是连通的，则称 <span class="arithmatex">\(G\)</span> 是连通图；否则，称 <span class="arithmatex">\(G\)</span> 是非连通图。</p>
+<h2 id="_82">连通分支</h2>
+<p>在无向图中，顶点之间的连通关系是等价关系。设 <span class="arithmatex">\(G\)</span> 为一个无向图，<span class="arithmatex">\(R\)</span> 是 <span class="arithmatex">\(G\)</span> 中顶点之间的连通关系。按照 <span class="arithmatex">\(\mathrm{R}\)</span> 可将 <span class="arithmatex">\(\mathrm{V}(G)\)</span> 划分成若干个等价类，设为 <span class="arithmatex">\(V_{1}, V_{2}, \ldots, V_{k}\)</span> 由它们导出的导出子图 <span class="arithmatex">\(G\left[V_{1}\right]，G\left[V_{2}\right], \ldots, G\left[V_{k}\right]\)</span> 称为 <span class="arithmatex">\(G\)</span> 的连通分支，<span class="arithmatex">\(G\)</span> 的连通分支的个数记为 <span class="arithmatex">\(p (G)\)</span>。</p>
+<p>设 <span class="arithmatex">\(D\)</span> 是一个有向图，如果略去 <span class="arithmatex">\(D\)</span> 中各有向边的方向后所得无向图是连通图，则称 <span class="arithmatex">\(D\)</span> 是弱连通图，简称连通图。若 <span class="arithmatex">\(D\)</span> 中任意两顶点至少一个可达另一个，则称 <span class="arithmatex">\(D\)</span> 是单向连通图。若 <span class="arithmatex">\(D\)</span> 中任何一对顶点都是相互可达的，则称 <span class="arithmatex">\(D\)</span> 是强连通图。</p>
+<h2 id="_83">关联矩阵</h2>
+<h3 id="_84">无向图</h3>
+<p>设无向图 <span class="arithmatex">\(G=&lt;V, E&gt;\)</span>，<span class="arithmatex">\(V=\left\{v_{1}, V_{2}, \ldots, V_{n}\right\}\)</span>，<span class="arithmatex">\(E=\left\{e_{1}, e_{2}, \ldots, e_{m}\right\}\)</span>，令 <span class="arithmatex">\(m_{i j}\)</span> 为 <span class="arithmatex">\(v_{i}\)</span> 与 <span class="arithmatex">\(e_{j}\)</span> 的关联次数，称 <span class="arithmatex">\(\left (m_{i j}\right)_{n \times m}\)</span> 为 <span class="arithmatex">\(G\)</span> 的关联矩阵，记为 <span class="arithmatex">\(M (G)\)</span>。</p>
+<ol>
+<li>每一列恰好有两个 <span class="arithmatex">\(1\)</span> 或一个 <span class="arithmatex">\(2\)</span>，这是因为每条边关联两个顶点 (环关联的两个顶点重合)。</li>
+<li>第 <span class="arithmatex">\(i\)</span> 行元素之和为 <span class="arithmatex">\(v_{i}\)</span> 的度数，<span class="arithmatex">\(\sum_{j=1}^{m} m_{j j}=d\left (V_{i}\right)\)</span>。</li>
+<li>所有元素之和等于 <span class="arithmatex">\(2 m\)</span>，<span class="arithmatex">\(\sum_{f=1}^{m} \sum_{k=1}^{n} m_{j}=\sum_{k=1}^{n} \sum_{j=1}^{m} m_{y}=\sum_{i=1}^{n} d\left (v_{l}\right)=2 m\)</span>。</li>
+<li><span class="arithmatex">\(v_{i}\)</span> 为孤立点当且仅当第 <span class="arithmatex">\(1\)</span> 行全为 <span class="arithmatex">\(0\)</span>。</li>
+<li><span class="arithmatex">\(e_{j}\)</span> 与 <span class="arithmatex">\(e_{k}\)</span> 平行边当且仅当第 <span class="arithmatex">\(j\)</span> 列与第 <span class="arithmatex">\(k\)</span> 列相同。</li>
+</ol>
+<p>设无环有向图 <span class="arithmatex">\(D=&lt;V, E&gt;\)</span>，<span class="arithmatex">\(V=\left\{v_{1}, v_{2}, \ldots, v_{n}\right\}\)</span>，<span class="arithmatex">\(E=\left\{e_{1}, e_{2}, \ldots\right.   \left. E_{m}\right\}\)</span>，令：</p>
+<div class="arithmatex">\[
+M_{i j}=\left\{\begin{array}{ll}
+1, &amp; v_{i} \text { 为 } e_{j} \text { 的始点 } \\
+0, &amp; v_{i} \text { 与 } e_{j} \text { 不关联 } \\
+-1, &amp; v_{i} \text { 为 } e_{j} \text { 的终点 }
+\end{array}\right.
+\]</div>
+<p>则称 <span class="arithmatex">\(\left (m_{i j}\right)_{n \times m}\)</span> 为 <span class="arithmatex">\(D\)</span> 的关联矩阵，记为 <span class="arithmatex">\(M (D)\)</span>。</p>
+<ol>
+<li>每一列恰好有一个 <span class="arithmatex">\(1\)</span> 和一个 <span class="arithmatex">\(- 1\)</span>。</li>
+<li>第 <span class="arithmatex">\(1\)</span> 行 <span class="arithmatex">\(1\)</span> 的个数等于 <span class="arithmatex">\(d^{+}\left (v_{i}\right),-1\)</span> 的个数等于 <span class="arithmatex">\(d\left (v_{i}\right)\)</span>。<span class="arithmatex">\(M (D)\)</span> 中所有 <span class="arithmatex">\(1\)</span> 的个数等于所有 <span class="arithmatex">\(-1\)</span> 的个数，且都等于 <span class="arithmatex">\(m\)</span>。</li>
+</ol>
+<p>在有向图中，若存在一条边 <span class="arithmatex">\(e\)</span> 以顶点 <span class="arithmatex">\(u\)</span> 为始点、以 <span class="arithmatex">\(v\)</span> 为终点，则称 <span class="arithmatex">\(u\)</span> 邻接到 <span class="arithmatex">\(v_{0}\)</span>。</p>
+<p>设有向图 <span class="arithmatex">\(D=&lt;V, E&gt;\)</span>，<span class="arithmatex">\(V=\left\{V_{1}, V_{2}, \ldots, V_{n}\right\}\)</span>，<span class="arithmatex">\(|E|=m\)</span>，令 <span class="arithmatex">\(a_{i j}^{(1)}\)</span> 为 <span class="arithmatex">\(V_{i}\)</span> 邻接到 <span class="arithmatex">\(V_{j}\)</span> 的边的条数，称 <span class="arithmatex">\(\left (a_{i j}^{(i)}\right)_{n \times n}\)</span> 为 <span class="arithmatex">\(D\)</span> 的邻接矩阵，记作 <span class="arithmatex">\(A (D)\)</span>。</p>
+<p>有向图的邻接矩阵有下述性质：</p>
+<ol>
+<li>第 <span class="arithmatex">\(i\)</span> 行元素之和等于 <span class="arithmatex">\(d^{+}\left (V_{j}\right), \sum_{j=1}^{n} a_{j j}^{(i)}=d^{+}\left (v_{i}\right)\)</span>。 </li>
+<li>第 <span class="arithmatex">\(j\)</span> 列元素之和等于 <span class="arithmatex">\(d\left (v_{j}\right), \sum_{i=1}^{n} a_{i j}^{(i)}=d^{-}\left (v_{j}\right)\)</span>。</li>
+<li>所有元素之和等于边数 (长度为 <span class="arithmatex">\(1\)</span> 的通路数)，<span class="arithmatex">\(\sum_{i=1}^{n} \sum_{j=1}^{n} a_{i j}^{(i)}=m\)</span>。</li>
+<li>长度为 <span class="arithmatex">\(1\)</span> 的回路数为 <span class="arithmatex">\(\sum_{i=1}^{n} a_{i i}^{(i)}\)</span>。</li>
+</ol>
+<p>有向图的通路数与回路数：</p>
+<p>设 <span class="arithmatex">\(A\)</span> 为 <span class="arithmatex">\(n\)</span> 阶有向图 <span class="arithmatex">\(D\)</span> 的邻接矩阵，则 <span class="arithmatex">\(A^{l}(\geq 1)\)</span> 中：
+<span class="arithmatex">\(a_{i j}^{(l)}\)</span> 为 <span class="arithmatex">\(D\)</span> 中 <span class="arithmatex">\(V_{i}\)</span> 到 <span class="arithmatex">\(V_{j}\)</span> 长度为 <span class="arithmatex">\(l\)</span> 的通路数，
+<span class="arithmatex">\(a_{i i}^{(l)}\)</span> 为 <span class="arithmatex">\(D\)</span> 中 <span class="arithmatex">\(V_{i}\)</span> 到自身长度为 <span class="arithmatex">\(l\)</span> 的回路数，
+<span class="arithmatex">\(\sum\limits_{i=1}^{n} \sum\limits_{j=1}^{n} a_{i j}^{(l)}\)</span> 为 <span class="arithmatex">\(D\)</span> 中长度为 <span class="arithmatex">\(l\)</span> 的通路（含回路）总数，
+<span class="arithmatex">\(\sum\limits_{l=1}^{n} a_{ii}^{(l)}\)</span> 为 <span class="arithmatex">\(D\)</span> 中长度为 <span class="arithmatex">\(1\)</span> 的回路总数。</p>
+<p>推论：设 <span class="arithmatex">\(B_{r}=A+A^{2}+\ldots+A^{r}(r \geq 1)\)</span>，则 <span class="arithmatex">\(B_{r}\)</span> 中元素 <span class="arithmatex">\(b_{i j}^{(r)}\)</span> 为 <span class="arithmatex">\(D\)</span> 中 <span class="arithmatex">\(v_{i}\)</span> 到 <span class="arithmatex">\(v_{j}\)</span> 长度小于等于 <span class="arithmatex">\(r\)</span> 的通路数，<span class="arithmatex">\(\sum\limits_{i=1}^{n} \sum\limits_{j=1}^{n} b_{i j}^{(r)}\)</span> 为 <span class="arithmatex">\(D\)</span> 中长度小于等于 <span class="arithmatex">\(r\)</span> 的通路（含回路）总数，其中 <span class="arithmatex">\(\sum\limits_{i=1}^{n} b_{i}^{(r)}\)</span> 为 <span class="arithmatex">\(D\)</span> 中长度小于或等于 <span class="arithmatex">\(r\)</span> 的回路总数。</p>
+<p>定义 <span class="arithmatex">\(D=&lt;V, E&gt;\)</span> 为有向图，<span class="arithmatex">\(V=\left\{V_{1}, V_{2}, \ldots, V_{n}\right\}\)</span>，令：</p>
+<div class="arithmatex">\[
+P_{t j}=\left\{\begin{array}{ll}
+1, &amp; \text { 若 } v_{t} \text { 可达 } v_{j}, \\
+0, &amp; \text { 否则, }
+\end{array}\right.
+\]</div>
+<p>称 <span class="arithmatex">\(\left (p_{i j}\right)_{n \times n}\)</span> 为 <span class="arithmatex">\(D\)</span> 的可达矩阵，记作 <span class="arithmatex">\(P (D)\)</span>。性质：</p>
+<ol>
+<li><span class="arithmatex">\(P (D)\)</span> 主对角线上的元素恒为 <span class="arithmatex">\(1\)</span>。</li>
+<li><span class="arithmatex">\(D\)</span> 强连通当且仅当 <span class="arithmatex">\(P (D)\)</span> 的元素全为 <span class="arithmatex">\(1\)</span>。</li>
+</ol>
+<h2 id="_85">割集</h2>
+<p>设无向图 <span class="arithmatex">\(G=&lt;V, E&gt;\)</span>，<span class="arithmatex">\(V \subset V\)</span>，若 <span class="arithmatex">\(p\left (G-V^{\prime}\right)&gt;p (G)\)</span>，且对 <span class="arithmatex">\(V\)</span> 的任何真子集 <span class="arithmatex">\(V^{\prime}, p\left (G-V^{\prime}\right)=p (G)\)</span>，则称 <span class="arithmatex">\(V\)</span> 为 <span class="arithmatex">\(G\)</span> 的点割集。若点割集中只有一个顶点 <span class="arithmatex">\(v\)</span>，则称 <span class="arithmatex">\(r\)</span> 为割点。</p>
+<p>又 <span class="arithmatex">\(E \subseteq E\)</span>，若 <span class="arithmatex">\(p (G-E)&gt;p (G)\)</span> 且对 <span class="arithmatex">\(E\)</span> 的任何真子集 <span class="arithmatex">\(E^{\prime}\)</span>，<span class="arithmatex">\(p\left (G-E^{\prime}\right)=p (G)\)</span>，则称 <span class="arithmatex">\(E^{\prime}\)</span> 为 <span class="arithmatex">\(G\)</span> 的边割集。简称割集。若为边割集中只有一条边 <span class="arithmatex">\(e\)</span>，则称 <span class="arithmatex">\(e\)</span> 为割边或桥。</p>
+<h2 id="_86">二部图</h2>
+<p>若能将无向图 <span class="arithmatex">\(G=&lt;V,E&gt;\)</span> 的顶点集 <span class="arithmatex">\(V\)</span> 划分成两个不相交的非空子集 <span class="arithmatex">\(V_{1}\)</span> 和 <span class="arithmatex">\(V_{2}\)</span>，使得 <span class="arithmatex">\(G\)</span> 中的每条边的两个端点一个属于 <span class="arithmatex">\(V_{1}\)</span>，另一个属于 <span class="arithmatex">\(V_{2}\)</span>，则称 <span class="arithmatex">\(G\)</span> 为二部图 (或偶图)。称 <span class="arithmatex">\(V_{1}\)</span> 和 <span class="arithmatex">\(V_{2}\)</span> 为互补顶点子集，此时可将 <span class="arithmatex">\(G\)</span> 记为 <span class="arithmatex">\(G=&lt; V_{1}, V_{2}, E&gt;\)</span>。</p>
+<p>若 <span class="arithmatex">\(V_{1}\)</span> 中每个顶点都与 <span class="arithmatex">\(V_{2}\)</span> 中每个顶点均有且仅有一条边相关联，则称二部图 <span class="arithmatex">\(G\)</span> 为完全二部图 (或完全偶图)。当 <span class="arithmatex">\(\left|V_{1}\right|=n,\left|V_{2}\right|=m\)</span>，完全二部图 <span class="arithmatex">\(G\)</span> 记为 <span class="arithmatex">\(K_{n, m}\)</span>。</p>
+<p>一个无向图 <span class="arithmatex">\(G=&lt;V, E&gt;\)</span> 是二部图当且仅当 <span class="arithmatex">\(G\)</span> 中没有长度为奇数的回路。</p>
+<p>设无向图 <span class="arithmatex">\(G=&lt; V, E&gt;\)</span>，<span class="arithmatex">\(M \subseteq E\)</span>，若 <span class="arithmatex">\(M\)</span> 中任意两条边均不相邻，则称 <span class="arithmatex">\(M\)</span> 为 <span class="arithmatex">\(G\)</span> 中的匹配。若在 <span class="arithmatex">\(M\)</span> 中再加入任何 <span class="arithmatex">\(1\)</span> 条边就都不是匹配了，则称 <span class="arithmatex">\(M\)</span> 为极大匹配。</p>
+<p>边数最多的匹配称为最大匹配，最大匹配中的边的条数称为 <span class="arithmatex">\(G\)</span> 的匹配数，记为 <span class="arithmatex">\(\beta_{1}(G)\)</span>，简记为 <span class="arithmatex">\(\beta_{1}\)</span>。
+设 <span class="arithmatex">\(M\)</span> 为 <span class="arithmatex">\(G\)</span> 中一个匹配，<span class="arithmatex">\(v \in V (G)\)</span>，若存在 <span class="arithmatex">\(M\)</span> 中的边与 <span class="arithmatex">\(v\)</span> 关联，则称 <span class="arithmatex">\(v\)</span> 为 <span class="arithmatex">\(M\)</span> 的饱和点，否则称 <span class="arithmatex">\(v\)</span> 为 <span class="arithmatex">\(M\)</span> 的非饱和点。若 <span class="arithmatex">\(G\)</span> 中每个顶点都是 <span class="arithmatex">\(M\)</span> 饱和点，则称 <span class="arithmatex">\(M\)</span> 为完美匹配。</p>
+<p>设 <span class="arithmatex">\(G=&lt;V_{1}, V_{2}, E&gt;\)</span> 为二部图，<span class="arithmatex">\(\left|V_{1}\right| \leq\left|V_{2}\right|\)</span>，<span class="arithmatex">\(M\)</span> 是 <span class="arithmatex">\(G\)</span> 中一个最大匹配，若 <span class="arithmatex">\(|M|=\left|V_{1}\right|\)</span>，则称 <span class="arithmatex">\(M\)</span> 为 <span class="arithmatex">\(G\)</span> 中 $V_{1}  到 <span class="arithmatex">\(V_{2}\)</span> 的完备匹配。
+当 <span class="arithmatex">\(\left|V_{1}\right|=\left|V_{2}\right|\)</span> 时，完备匹配是完美匹配。</p>
+<p>Hall 定理：设二部图 <span class="arithmatex">\(G=&lt;V_{1}, V_{2}, E&gt;\)</span> 中，<span class="arithmatex">\(\left|V_{1}\right| \leq\left|V_{2}\right|\)</span>。<span class="arithmatex">\(G\)</span> 中存在从 <span class="arithmatex">\(V_{1}\)</span> 到 <span class="arithmatex">\(V_{2}\)</span> 的完备匹配当且仅当 <span class="arithmatex">\(V_{1}\)</span> 中任意 <span class="arithmatex">\(k\)</span> 个顶点至少邻接 <span class="arithmatex">\(V_{2}\)</span> 中的 <span class="arithmatex">\(k\)</span> 个顶点。</p>
+<h2 id="_87">相异性条件</h2>
+<p>二部图 <span class="arithmatex">\(G=&lt;V_{1}, V_{2}, E&gt;\)</span> 中，如果存在 <span class="arithmatex">\(t&gt;0\)</span>，使得：</p>
+<ol>
+<li><span class="arithmatex">\(V_{1}\)</span> 中每个顶点至少关联 <span class="arithmatex">\(t\)</span> 条边。</li>
+<li><span class="arithmatex">\(V_{2}\)</span> 中每个顶点至多关联条边。</li>
+</ol>
+<p>则 <span class="arithmatex">\(G\)</span> 中存在 <span class="arithmatex">\(V_{1}\)</span> 到 <span class="arithmatex">\(V_{2}\)</span> 的完备匹配。</p>
+<h2 id="_88">欧拉图</h2>
+<p>经过图（无向图或有向图）中每条边一次且仅一次并且行遍图中每个顶点的回路（通路），称为欧拉回路（欧拉通路）。存在欧拉回路的图称为欧拉图，存在欧拉通路，但无欧拉回路的图称为半欧拉图。</p>
+<p>无向图 <span class="arithmatex">\(G\)</span> 有欧拉回路，当且仅当 <span class="arithmatex">\(G\)</span> 是连通图且无奇度顶点。无向图 <span class="arithmatex">\(G\)</span> 有欧拉通路、但无欧拉回路，当且仅当 <span class="arithmatex">\(G\)</span> 是连通图且恰有两个奇度顶点。这两个奇度顶点是欧拉通路的端点。</p>
+<p>有向图 <span class="arithmatex">\(D\)</span> 有欧拉回路，当且仅当 <span class="arithmatex">\(D\)</span> 是连通的且每个顶点的入度都等于出度。有向图 <span class="arithmatex">\(D\)</span> 有欧拉通路、但无欧拉回路，当且仅当 <span class="arithmatex">\(D\)</span> 是连通的，且除了两个顶点外，其余顶点的入度均等于出度。这两个特殊的顶点中，一个顶点的入度比出度大 <span class="arithmatex">\(1\)</span>，另一个顶点的入度比出度小 <span class="arithmatex">\(1\)</span>。任何欧拉通路以前一个顶点为终点，以后一个顶点为始点。</p>
+<h2 id="_89">哈密顿图</h2>
+<p>经过图中每个顶点一次且仅一次的通路称为哈密顿通路，闭合的哈密顿通路称为哈密顿回路。存在哈密顿回路的图称为哈密顿图，具有哈密顿通路而无哈密顿回路的图称为半哈密顿图。</p>
+<p>设无向图 <span class="arithmatex">\(G=&lt;V, E&gt;\)</span> 是哈密顿图，<span class="arithmatex">\(V_{1}\)</span> 是 <span class="arithmatex">\(V\)</span> 的任意非空子集，则：</p>
+<div class="arithmatex">\[
+P\left (G-V_{1}\right) \leq\left|V_{1}\right|
+\]</div>
+<p>推论：设无向图 <span class="arithmatex">\(G=&lt;V, E&gt;\)</span> 中有哈密顿通路，<span class="arithmatex">\(V_{1}\)</span> 是 <span class="arithmatex">\(V\)</span> 的任意非空子集，则 <span class="arithmatex">\(p\left (G-V_{1}\right) \leq\left|V_{1}\right|+1\)</span>。</p>
+<h3 id="_90">无向哈密顿图的一个充分条件</h3>
+<p>设 <span class="arithmatex">\(G\)</span> 是 <span class="arithmatex">\(n (n \geq 3)\)</span> 阶无向简单图，如果 <span class="arithmatex">\(G\)</span> 中任何一对不相邻的顶点的度数之和都大于等于 <span class="arithmatex">\(n-1\)</span>，则 <span class="arithmatex">\(G\)</span> 中存在哈密顿通路。如果 <span class="arithmatex">\(G\)</span> 中任何一对不相邻的顶点的度数之和都大于等于 <span class="arithmatex">\(n\)</span>，则 <span class="arithmatex">\(G\)</span> 中存在哈密顿图。</p>
+<h3 id="_91">有向图的哈密通路</h3>
+<p>在 <span class="arithmatex">\(n (n \geq 2)\)</span> 阶有向图 <span class="arithmatex">\(D=&lt;V, E&gt;\)</span> 中，如果所有有向边均用无向边代替，所得无向图含有生成子图 <span class="arithmatex">\(K_{n}\)</span>，则有向图 <span class="arithmatex">\(D\)</span> 中存在哈密顿通路。</p>
+<h2 id="_92">平面图</h2>
+<p>如果图 <span class="arithmatex">\(G\)</span> 能画在平面上使得除顶点处外没有边交叉出现，则称 <span class="arithmatex">\(G\)</span> 是平面图。画出的这种不出现边交叉的图称为 G 的一个平面嵌入。没有平面嵌入的图称作非平面图。</p>
+<h3 id="_93">平面图的面与次数</h3>
+<p>设 <span class="arithmatex">\(G\)</span> 是一个平面嵌入：</p>
+<ul>
+<li><span class="arithmatex">\(G\)</span> 的面：由 <span class="arithmatex">\(G\)</span> 的边将平面划分成的每一个区域。</li>
+<li>无限面 (外部面)：面积无限的面，用 <span class="arithmatex">\(R_{0}\)</span> 表示。</li>
+<li>有限面 (内部面)：面积有限的面，用 <span class="arithmatex">\(R_{1}, R_{2}, \ldots, R_{k}\)</span> 表示。</li>
+<li>面 <span class="arithmatex">\(R_{i}\)</span> 的边界：包围 <span class="arithmatex">\(R_{i}\)</span> 的所有边构成的回路组。</li>
+<li>面 <span class="arithmatex">\(R_{i}\)</span> 的次数：<span class="arithmatex">\(R_{i}\)</span> 边界的长度，用 <span class="arithmatex">\(\operatorname{deg}\left (R_{i}\right)\)</span> 表示。</li>
+</ul>
+<p>平面图的所有面的次数之和等于边数的 <span class="arithmatex">\(2\)</span> 倍。</p>
+<p>设 <span class="arithmatex">\(G\)</span> 为一个简单平面图，如果在 <span class="arithmatex">\(G\)</span> 中任意不相邻的两个顶点之间再加一条边，所得图为非平面图，则称 <span class="arithmatex">\(G\)</span> 为极大平面图。若在非平面图 <span class="arithmatex">\(G\)</span> 中任意删除一条边，所得图为平面图，则称 <span class="arithmatex">\(G\)</span> 为极小非平面图。极大平面图必连通，极小非平面图必为简单图。</p>
+<p><span class="arithmatex">\(n (n \geq 3)\)</span> 阶简单平面图是极大平面图当且仅当它连通且每个面的次数都为 <span class="arithmatex">\(3\)</span>。</p>
+<h3 id="_94">欧拉公式</h3>
+<p>设 <span class="arithmatex">\(G\)</span> 为 <span class="arithmatex">\(n\)</span> 阶 <span class="arithmatex">\(m\)</span> 条边 <span class="arithmatex">\(r\)</span> 个面的连通平面图，则有：</p>
+<div class="arithmatex">\[
+N-m+r=2
+\]</div>
+<p>设 <span class="arithmatex">\(G\)</span> 是有 <span class="arithmatex">\(p (p \geq 2)\)</span> 个连通分支的平面图，则：</p>
+<div class="arithmatex">\[
+N-m+r=p+1
+\]</div>
+<p>设 <span class="arithmatex">\(G\)</span> 为 <span class="arithmatex">\(n\)</span> 阶 <span class="arithmatex">\(m\)</span> 条边的连通平面图，每个面的次数不小于 <span class="arithmatex">\(l (l \geq 3)\)</span>，则：</p>
+<div class="arithmatex">\[
+M \leq \frac{l}{l-2}(n-2)
+\]</div>
+<p>设 <span class="arithmatex">\(G\)</span> 为有 <span class="arithmatex">\(p (p \geq 2)\)</span> 个连通分支的平面图，且每个面的次数不小于 <span class="arithmatex">\(l (l \geq 3)\)</span>，则：</p>
+<div class="arithmatex">\[
+M \leq \frac{l}{l-2}(n-p-1)
+\]</div>
+<p>推论：<span class="arithmatex">\(K_5\)</span> 和 <span class="arithmatex">\(K_{3,3}\)</span> 不是平面图。</p>
+<p>设平面图 <span class="arithmatex">\(G\)</span>，有 <span class="arithmatex">\(n\)</span> 个顶点，<span class="arithmatex">\(m\)</span> 条边和 <span class="arithmatex">\(r\)</span> 个面，<span class="arithmatex">\(G\)</span> 的对偶图 <span class="arithmatex">\(G^{*}=&lt;V^{*}, E^{*}&gt;\)</span> 如下：</p>
+<p>在 <span class="arithmatex">\(G\)</span> 的每一个面 <span class="arithmatex">\(R_{i}\)</span> 中任取一个点 <span class="arithmatex">\(v_{i} *\)</span> 作为 <span class="arithmatex">\(G^{*}\)</span> 的顶点。</p>
+<div class="arithmatex">\[
+V^{*}=\left\{v_{i}^{*} \mid i=1,2, \ldots, r\right\}
+\]</div>
+<p>对 <span class="arithmatex">\(G\)</span> 的每一条边 <span class="arithmatex">\(e_{k}\)</span>，若 <span class="arithmatex">\(e_{k}\)</span> 在 <span class="arithmatex">\(G\)</span> 的面 <span class="arithmatex">\(R_{i}\)</span> 与 <span class="arithmatex">\(R_{j}\)</span> 的公共边界上，则作边 <span class="arithmatex">\(e_{k}^{*}=\left (v_{i}^{*}, v_{j}^{*}\right)\)</span>，且与 <span class="arithmatex">\(e_{k}\)</span> 相交。</p>
+<p>若 <span class="arithmatex">\(e_{k}\)</span> 为 <span class="arithmatex">\(G\)</span> 中的桥且在面 <span class="arithmatex">\(R_{i}\)</span> 的边界上，则作环 <span class="arithmatex">\(e_{k}^{*}=\left (v_{i}^{*}, V_{i}^{*}\right)\)</span>。</p>
+<div class="arithmatex">\[
+E^{*}=\left\{e_{k}^{*} \mid k=1,2, \ldots, m\right\}
+\]</div>
+<h2 id="_95">无向树</h2>
+<p>不含回路的连通无向图称为无向树，简称树。每个连通分支均是树的非连通无向图称为森林。平凡图称为平凡树。树中度数为 <span class="arithmatex">\(1\)</span> 的顶点称为树叶，度数大于等于 <span class="arithmatex">\(2\)</span> 的顶点称为分支点。</p>
+<p>设 <span class="arithmatex">\(G=(V, E)\)</span> 是 <span class="arithmatex">\(n\)</span> 阶 <span class="arithmatex">\(m\)</span> 条边的无向图，则下面各命题是等价的：</p>
+<ol>
+<li><span class="arithmatex">\(G\)</span> 连通且不含回路。</li>
+<li><span class="arithmatex">\(G\)</span> 的每对顶点之间有唯一的一条路径。</li>
+<li><span class="arithmatex">\(G\)</span> 是连通的且 <span class="arithmatex">\(m=n-1\)</span>。</li>
+<li><span class="arithmatex">\(G\)</span> 中无回路且 <span class="arithmatex">\(m=n-1\)</span>。</li>
+<li><span class="arithmatex">\(G\)</span> 中无回路，但在任两个不相邻的顶点之间增加一条边，就形成唯一的一条初级回路。</li>
+<li><span class="arithmatex">\(G\)</span> 是连通的且每条边都是桥。</li>
+</ol>
+<p><span class="arithmatex">\(n\)</span> 阶非平凡的树中至少有 <span class="arithmatex">\(2\)</span> 片树叶。</p>
+<p>设 <span class="arithmatex">\(G=(V, E)\)</span> 是无向连通图，<span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\(G\)</span> 的生成子图并且是树，则称 <span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\(G\)</span> 的生成树。</p>
+<p>生成树 <span class="arithmatex">\(T\)</span> 的树枝：<span class="arithmatex">\(G\)</span> 在 <span class="arithmatex">\(T\)</span> 中的边。
+生成树 <span class="arithmatex">\(T\)</span> 的弦：<span class="arithmatex">\(G\)</span> 不在 <span class="arithmatex">\(T\)</span> 中的边。
+生成树 <span class="arithmatex">\(T\)</span> 的余树：所有弦的集合的导出子图。
+设 <span class="arithmatex">\(n\)</span> 阶连通无向图有 <span class="arithmatex">\(m\)</span> 条边，则它的生成树有 <span class="arithmatex">\(n-1\)</span> 条边，余树有 <span class="arithmatex">\(m-n+1\)</span> 条边。</p>
+<p>任何无向连通图都有生成树。</p>
+<h1 id="_96">主成分分析</h1>
+<h2 id="_97">内积和范数</h2>
+<p>对于实向量 <span class="arithmatex">\(\mathbf{x}\)</span> 和向量 <span class="arithmatex">\(\mathbf{y}\)</span>：</p>
+<ol>
+<li>向量 <span class="arithmatex">\(\mathbf{x}\)</span> 和向量 <span class="arithmatex">\(\mathbf{y}\)</span> 的内积：</li>
+</ol>
+<div class="arithmatex">\[
+\langle\mathbf{x}, \mathbf{y}\rangle=\mathbf{x}^{T} \mathbf{y}=\sum_{i=1}^{n} x_{i} y_{i}
+\]</div>
+<ol>
+<li>向量 <span class="arithmatex">\(\mathbf{x}\)</span> 的范数：<ol>
+<li><span class="arithmatex">\(L_{0}\)</span> 范数 (也称 <span class="arithmatex">\(0\)</span> 范数)：<span class="arithmatex">\(\|\mathbf{x}\|_{0}\)</span> 定义为 <span class="arithmatex">\(\mathbf{x}\)</span> 中非零元的个数。</li>
+<li><span class="arithmatex">\(L_{1}\)</span> 范数 (也称和范数或 <span class="arithmatex">\(1\)</span> 范数)：<span class="arithmatex">\(\|\mathbf{x}\|_{1}=\sum_{i=1}^{n}\left|x_{i}\right|\)</span>。</li>
+<li><span class="arithmatex">\(L_{2}\)</span> 范数 (也称欧氏范数或 <span class="arithmatex">\(2\)</span> 范数)：<span class="arithmatex">\(\|\mathbf{x}\|_{2}=\left (\sum_{i=1}^{n}\left|x_{i}\right|^{2}\right)^{1 / 2}\)</span>。</li>
+<li><span class="arithmatex">\(L_{\infty}\)</span> 范数 (也称无穷范数)：<span class="arithmatex">\(\|\mathbf{x}\|_{\infty}=\max \left\{\left|x_{1}\right|,\left|x_{2}\right|, \cdots,\left|x_{n}\right|\right\}\)</span>。</li>
+<li><span class="arithmatex">\(L_{p}\)</span> 范数 (也称 Hölder 范数)：<span class="arithmatex">\(\|\mathbf{x}\|_{p}=\left (\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{1 / p}, p \geq 1\)</span>。</li>
+</ol>
+</li>
+</ol>
+<h2 id="_98">求解步骤</h2>
+<p>主成分求解步骤如下：</p>
+<ol>
+<li>求样本均值 <span class="arithmatex">\(\bar{x}=\left (\overline{x_{1}}, \overline{x_{2}}, \ldots, \overline{x_{p}}\right)\)</span> 和样本的协方差矩阵 <span class="arithmatex">\(\boldsymbol{S}\)</span>。</li>
+<li>求解特征方程 <span class="arithmatex">\(|\boldsymbol{I}-\boldsymbol{S}|=0\)</span>，解得 <span class="arithmatex">\(p\)</span> 个特征根 <span class="arithmatex">\(\lambda_{1}, \lambda_{2}, \ldots \lambda_{p}\)</span>。</li>
+<li>求每个特征值对应的单位正交特征向量 <span class="arithmatex">\(\boldsymbol{\alpha}_{i}(k=1,2, \ldots, k)\)</span>，解得 <span class="arithmatex">\(\boldsymbol{\alpha}_{i}=\left (\alpha_{1 i}, \alpha_{2 i}, \ldots, \alpha_{i}\right)^{T}\)</span> 。</li>
+<li>写成主成分的表达式：</li>
+</ol>
+<div class="arithmatex">\[
+\boldsymbol{f}_{i}=\alpha_{1 i}\left (\boldsymbol{x}_{1}-\overline{\boldsymbol{x}_{1}} \mathbf{1}\right)+\alpha_{2 i}\left (\boldsymbol{x}_{2}-\overline{\boldsymbol{x}_{2}} \mathbf{1}\right)+\ldots+\alpha_{p i}\left (\boldsymbol{x}_{p}-\overline{\boldsymbol{x}_{p}} \mathbf{1}\right)
+\]</div>
+<h1 id="svd-moore-penrose">SVD 分解与 Moore-Penrose 逆矩阵</h1>
+<p>假设我们有一个矩阵 <span class="arithmatex">\(A=\left[\begin{array}{ll}1 &amp; 1 \\ 1 &amp; 1 \\ 0 &amp; 0\end{array}\right]\)</span>。</p>
+<h2 id="u">第一步计算 U</h2>
+<p>计算矩阵 <span class="arithmatex">\(A A^{T}=\left[\begin{array}{lll}2 &amp; 2 &amp; 0 \\ 2 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 0\end{array}\right]\)</span>。</p>
+<p>对其进行特征分解，分别得到特征值 <span class="arithmatex">\(4,0,0\)</span> 和对应的特征向量 <span class="arithmatex">\(\left[\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0\right]^{T},\left[-\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0\right]^{T},[0,0,1]^{T}\)</span>，可以得到：</p>
+<div class="arithmatex">\[
+U=\left[\begin{array}{ccc}
+\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}} &amp; 0 \\
+\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right]
+\]</div>
+<h2 id="sigmam-times-n">第二步计算 <span class="arithmatex">\(\Sigma^{m \times n}\)</span></h2>
+<p><span class="arithmatex">\(\Sigma_{m n}=\left[\begin{array}{cc}\Sigma_{1} &amp; 0 \\ 0 &amp; 0\end{array}\right]\)</span>，其中 <span class="arithmatex">\(\Sigma_{1}=\operatorname{diag}\left (\sigma_{1}, \sigma_{1}, \ldots, \sigma_{r}\right)\)</span> 是将第一步求出的非零特征值从大到小排列后开根号的值，这里：</p>
+<div class="arithmatex">\[
+\Sigma=\left[\begin{array}{ll}2 &amp; 0 \\ 0 &amp; 0 \\ 0 &amp; 0\end{array}\right] 
+\]</div>
+<h2 id="v">第三步计算 V</h2>
+<p>已知 <span class="arithmatex">\(rank (A)=1\)</span>。</p>
+<p>计算 <span class="arithmatex">\(V_1=A^TU_1\Lambda^{-1}=\left[\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right]^{T}\)</span></p>
+<p>将 <span class="arithmatex">\(V_1\)</span> 拓展为酉矩阵 (也就是正交矩阵，但是支持复数形式)得到：</p>
+<div class="arithmatex">\[
+V=\left[\begin{array}{cc}
+\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}
+\end{array}\right]
+\]</div>
+<p>最终，我们可以得到 <span class="arithmatex">\(A\)</span> 的奇异值分解：</p>
+<div class="arithmatex">\[
+A=U \Sigma V^{T}=\left[\begin{array}{ccc}
+\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}} &amp; 0 \\
+\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right]\left[\begin{array}{ll}
+2 &amp; 0 \\
+0 &amp; 0 \\
+0 &amp; 0
+\end{array}\right]\left[\begin{array}{cc}
+\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}
+\end{array}\right]^{T}=\left[\begin{array}{ll}
+1 &amp; 1 \\
+1 &amp; 1 \\
+0 &amp; 0
+\end{array}\right]
+\]</div>
+<h2 id="moore-penrose">计算 Moore-Penrose 逆矩阵</h2>
+<div class="arithmatex">\[
+A^+=V\Sigma^+U^T
+\]</div>
+<h1 id="_99">回归</h1>
+<p>已知：<span class="arithmatex">\(y=\beta_0+\beta_1 x_i\)</span></p>
+<h2 id="_100">简单回归的最小二乘估计</h2>
+<div class="arithmatex">\[
+\begin{array}{c}
+\hat{\beta}_{0}=\bar{y}-\hat{\beta}_{1} \bar{x} \\
+\hat{\beta}_{1}=\frac{\sum_{i=1}^{n} x_{i} y_{i}-n \bar{x} \bar{y}}{\sum_{i=1}^{n} x_{i}^{2}-n (\bar{x})^{2}}
+\end{array}
+\]</div>
+<h2 id="_101">多元回归的帽子矩阵法</h2>
+<div class="arithmatex">\[
+\begin{array}{c}
+\widehat{\boldsymbol{\beta}}=\left (\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} \boldsymbol{y} \\
+\widehat{\boldsymbol{y}}=\boldsymbol{X}\left (\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} \boldsymbol{y}
+\end{array}
+\]</div>
+<p>其中称 <span class="arithmatex">\(\boldsymbol{H}=\boldsymbol{X}\left (\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T}\)</span> 称为帽子矩阵，它是对称幂等阵，即：</p>
+<div class="arithmatex">\[
+\boldsymbol{H}^{T}=\boldsymbol{H}, \quad \boldsymbol{H}^{n}=\boldsymbol{H}, \quad (\boldsymbol{I}-\boldsymbol{H})^{n}=\boldsymbol{I}-\boldsymbol{H}
+\]</div>
+<h1 id="_102">代数系统</h1>
+<h2 id="_103">群</h2>
+<p>若在一个非空集合 <span class="arithmatex">\(G\)</span> 上定义了一个运算，记为” <span class="arithmatex">\(\cdot\)</span> “，称为乘法，并满足下列条件：</p>
+<ol>
+<li>结合律成立，对任意 <span class="arithmatex">\(a, b, c \in G\)</span>，有 <span class="arithmatex">\(a \cdot (b \cdot c)=(a \cdot b) \cdot c\)</span>。</li>
+<li>有单位元素 (幺元) <span class="arithmatex">\(e \in G\)</span>，满足：对任意 <span class="arithmatex">\(a \in G\)</span>，有：<span class="arithmatex">\(a \cdot e=e \cdot a=a\)</span>。</li>
+<li><span class="arithmatex">\(G\)</span> 中任意元素 <span class="arithmatex">\(a\)</span> 均有逆元素 <span class="arithmatex">\(a^{1} \in G\)</span>，满足：<span class="arithmatex">\(a \cdot a^{-1}=a^{-1} \cdot a=e\)</span>。</li>
+</ol>
+<p>则称 <span class="arithmatex">\(G\)</span> 对于运算“<span class="arithmatex">\(\cdot\)</span>”构成一个群，或简称 <span class="arithmatex">\(G\)</span> 为一个群。只满足 1)为半群，只满足 1)和 2)为带幺半群。</p>
+<p>若上述定义的运算为加法，则将运算符号” <span class="arithmatex">\(\cdots\)</span> “改为“<span class="arithmatex">\(+\)</span>”，么元改为零元，逆元改为负元。</p>
+<p>若群 <span class="arithmatex">\(G\)</span> 对于对于上述运算还有交换律成立，即对于任意 <span class="arithmatex">\(a, b \in   G\)</span>，有 <span class="arithmatex">\(a \cdot b=b \cdot a\)</span>，则称 <span class="arithmatex">\(G\)</span> 为交换群（或称 Abel 群）。</p>
+<p>群是一种代数系统，它是由一个非空集合与一个运算构成的。若集合不同，构成的群当然不同。对同一个集合，运算不同则构成的群也不同。</p>
+<p>按群 <span class="arithmatex">\(G\)</span> 具有元素的个数 (元数)多少分为无限群与有限群。</p>
+<p>有限群实例：含有 <span class="arithmatex">\(n\)</span> 个元素的有限集上的所有可逆映射（称为 <span class="arithmatex">\(n\)</span> 元置换），对于映射的乘法构成一个群，称为 <span class="arithmatex">\(n\)</span> 元置换群，或称为 <span class="arithmatex">\(n\)</span> 次对称群，记为 <span class="arithmatex">\(S_{n}\)</span>。<span class="arithmatex">\(S_{n}\)</span> 的每一个元素可以表示成一个 <span class="arithmatex">\(n\)</span> 元置换：</p>
+<div class="arithmatex">\[
+\sigma=\left[\begin{array}{ccccc}
+1 &amp; 2 &amp; 3 &amp; \cdots &amp; n \\
+J_{1} &amp; j_{2} &amp; j_{3} &amp; \cdots &amp; j_{n}
+\end{array}\right]
+\]</div>
+<p>其中，<span class="arithmatex">\(j_{1}, j_{2}, j_{3}, \ldots, j_{n}\)</span> 为 <span class="arithmatex">\(1,2,3, \ldots, n\)</span> 的某个排列。</p>
+<p>无限群实例：非空集合 <span class="arithmatex">\(U\)</span> 到其自身的所有可逆映射（或称为变换），对于映射的乘法构成群，称为集合 <span class="arithmatex">\(U\)</span> 的全变换群，记为 <span class="arithmatex">\(S_{u}\)</span>。当 <span class="arithmatex">\(U\)</span> 为无限集时，<span class="arithmatex">\(S_{u}\)</span> 为无限群。<span class="arithmatex">\(S_{u}\)</span> 的非空子集，若对于映射的乘法也构成群，则称为变换群。</p>
+<p>群有以下简单性质:</p>
+<ol>
+<li>任意一个群的单位元是唯一的。群的任意元的逆元也是唯一的。</li>
+<li>若 <span class="arithmatex">\((G, \cdot)\)</span> 是一个群，则对任意 <span class="arithmatex">\(a, b \in G\)</span>，方程 <span class="arithmatex">\(a \cdot x=b \text { 与 } y \cdot a=b\)</span>，均有唯一解。</li>
+<li>消去律成立，即：</li>
+</ol>
+<div class="arithmatex">\[
+\begin{array}{l}
+A \cdot x=a \cdot y \Rightarrow x=y \\
+X \cdot a=y \cdot a \Rightarrow x=y
+\end{array}
+\]</div>
+<p>群中可以定义幂：</p>
+<div class="arithmatex">\[
+\begin{array}{l}
+A^{1}=a, a^{n+1}=a^{n} \cdot a \\
+A^{0}=e, a^{-n}=\left (a^{-1}\right)^{n}, n&gt;0
+\end{array}
+\]</div>
+<h2 id="_104">子群</h2>
+<p>如果群 <span class="arithmatex">\(G\)</span> 的非空子集 <span class="arithmatex">\(H\)</span> 对于 <span class="arithmatex">\(G\)</span> 上定义的运算也构成一个群，则称 <span class="arithmatex">\(H\)</span> 为 <span class="arithmatex">\(G\)</span> 的子群。</p>
+<p>设 <span class="arithmatex">\(G\)</span> 是任意一个群，<span class="arithmatex">\(e\)</span> 是 <span class="arithmatex">\(G\)</span> 的单位元，则单位元群 <span class="arithmatex">\(\{e\}\)</span> 是 <span class="arithmatex">\(G\)</span> 的子群，且 <span class="arithmatex">\(G\)</span> 本身也构成 <span class="arithmatex">\(G\)</span> 的子群。这两个特殊的子群，称为 <span class="arithmatex">\(G\)</span> 的平凡子群。除此之外，<span class="arithmatex">\(G\)</span> 的其他子群 <span class="arithmatex">\(H\)</span> 可称为非平凡子群。</p>
+<p>群 <span class="arithmatex">\(G\)</span> 的非空子集 <span class="arithmatex">\(H\)</span> 是 <span class="arithmatex">\(G\)</span> 的子群的充要条件是：</p>
+<ol>
+<li>对任意 <span class="arithmatex">\(a, b \in H\)</span>，有 <span class="arithmatex">\(a \cdot b \in H\)</span>。</li>
+<li>对任意 <span class="arithmatex">\(a \in H\)</span>，有 <span class="arithmatex">\(a^{-1} \in H\)</span>。</li>
+</ol>
+<p>群 <span class="arithmatex">\(G\)</span> 的非空子集 <span class="arithmatex">\(H\)</span> 是 <span class="arithmatex">\(G\)</span> 的子群的充要条件是：对任意 <span class="arithmatex">\(a, b \in H\)</span>，有 <span class="arithmatex">\(a \cdot b^{-1} \in H\)</span>。</p>
+<p>设 <span class="arithmatex">\(H\)</span> 是群 <span class="arithmatex">\(G\)</span> 的子群，对任意给定的 <span class="arithmatex">\(a \in G\)</span>，记：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A H &amp; =\{a \cdot h \mid \forall h \in H\} \\
+H a &amp; =\{h \cdot a \mid \forall h \in H\}
+\end{aligned}
+\]</div>
+<p>分别称为 <span class="arithmatex">\(H\)</span> 的左陪集与右陪集。</p>
+<p>若群 <span class="arithmatex">\(G\)</span> 中子群 <span class="arithmatex">\(H\)</span> 的任意左陪集同时又是 <span class="arithmatex">\(H\)</span> 的右陪集，也就是说，<span class="arithmatex">\(H\)</span> 能够与 <span class="arithmatex">\(G\)</span> 的任意元素 <span class="arithmatex">\(a\)</span> 交换，即对任意 <span class="arithmatex">\(a \in G\)</span> 有：</p>
+<div class="arithmatex">\[
+\mathrm{aH}=\mathrm{Ha}
+\]</div>
+<p>则称 <span class="arithmatex">\(H\)</span> 为 <span class="arithmatex">\(G\)</span> 的正规子群。</p>
+<p>交换群的任意子群均是正规子群。</p>
+<p>正规子群 <span class="arithmatex">\(H\)</span> 可以定义左陪集的乘法运算：</p>
+<p><span class="arithmatex">\(a H \cdot b H=a H b \cdot H=a b H \cdot H=a b H\)</span> 对任意 <span class="arithmatex">\(a, b \in G\)</span>，<span class="arithmatex">\(G\)</span> 中所有 <span class="arithmatex">\(H\)</span> 的左陪集构成的集合对于上述乘法运算构成群。</p>
+<p>设 <span class="arithmatex">\(G\)</span> 与 <span class="arithmatex">\(G^{\prime}\)</span> 是两个群，如果有一个 <span class="arithmatex">\(G\)</span> 到 <span class="arithmatex">\(G^{\prime}\)</span> 上的一一对应 <span class="arithmatex">\(\sigma\)</span>，对于 <span class="arithmatex">\(G\)</span> 与 <span class="arithmatex">\(G^{\prime}\)</span> 的运算，有：</p>
+<div class="arithmatex">\[
+\sigma (x \cdot y)=\sigma (x) \circ \sigma (y)
+\]</div>
+<p>对任意 <span class="arithmatex">\(x, y \in G\)</span> 均成立。那么，就称 <span class="arithmatex">\(G\)</span> 同构于 <span class="arithmatex">\(G^{\prime}\)</span>，记为 <span class="arithmatex">\(G \cong G^{\prime}\)</span>，称满足上述条件的映射为同构映射（简称同构）。</p>
+<p>同构把 <span class="arithmatex">\(G\)</span> 的单位元变为 <span class="arithmatex">\(G\)</span> 的单位元，把 <span class="arithmatex">\(G\)</span> 的逆元变为 <span class="arithmatex">\(G\)</span> 的逆元。</p>
+<h1 id="_105">三维空间刚体运动</h1>
+<h2 id="_106">旋转向量</h2>
+<p>三维空间中的旋转也可以表示为向量绕着某一个单位向量旋转一个具体角度。因此，可以用一个旋转轴和一个旋转角进行刻画，其旋转方向为旋转轴的方向。因此，只使用一个向量即可进行描述，其方向与旋转轴一致，长度等于旋转角，这种向量称为旋转向量 (或轴角 angle-axis)，正好为三维：</p>
+<div class="arithmatex">\[
+\boldsymbol{\phi}=\theta \boldsymbol{n}
+\]</div>
+<p>其中 <span class="arithmatex">\(\theta\)</span> 表示旋转角度，<span class="arithmatex">\(\boldsymbol{n}\)</span> 表示单位旋转向量。</p>
+<p>罗德里格斯公式：旋转向量到旋转矩阵</p>
+<div class="arithmatex">\[
+\boldsymbol{R}=\cos \theta \boldsymbol{I}+(1-\cos \theta) \boldsymbol{n} \boldsymbol{n}^{T}+\sin \theta \boldsymbol{n}^{\wedge} .
+\]</div>
+<p>同样, 对于变换矩阵, 可用一个旋转向量和一个平移向量进行描述, 正好为六维。</p>
+<p>旋转矩阵到旋转向量的转换:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\operatorname{tr}(\boldsymbol{R}) &amp; =3 \cos \theta+(1-\cos \theta) \operatorname{tr}\left (\boldsymbol{n n}^{T}\right) \\
+&amp; =3 \cos \theta+(1-\cos \theta)\|\boldsymbol{n}\|_{2}^{2} \\
+&amp; =3 \cos \theta+(1-\cos \theta) \\
+&amp; =1+2 \cos \theta
+\end{aligned}
+\]</div>
+<p>从而 <span class="arithmatex">\(\theta=\arccos \frac{\operatorname{tr}(\boldsymbol{R})-1}{2}\)</span>，同时，由 <span class="arithmatex">\(\boldsymbol{R} \boldsymbol{n}=\boldsymbol{n}\)</span> 可得：</p>
+<div class="arithmatex">\[
+(\boldsymbol{R}-\boldsymbol{I}) \boldsymbol{n}=0,\|\boldsymbol{n}\|_{2}=1
+\]</div>
+<p>即通过旋转矩阵的迹求旋转角度，通过旋转矩阵的特征值求单位旋转向量。
+轴角的表示也有奇异性，比如转 30 度与转 390 度的轴角表示是一样的。</p>
+<h2 id="_107">四元数</h2>
+<div class="arithmatex">\[
+\begin{array}{l}
+\boldsymbol{q}=W+x i+y j+z \boldsymbol{k} \\
+S=W \in \mathbb{R}, \boldsymbol{v}=(x, y, z)^{T} \in \mathbb{R}^{3} \\
+\boldsymbol{q}=(s, x, y, z)^{T}=\left (\begin{array}{l}
+S \\
+\boldsymbol{v}
+\end{array}\right)
+\end{array}
+\]</div>
+<p>对于 ijk 有：</p>
+<div class="arithmatex">\[
+\left\{\begin{array}{l}
+I j=k, j i=-k \\
+J k=i, k j=-i \\
+K i=j, i k=-j \\
+I^{2}=-1, j^{2}=-1, k^{2}=-1
+\end{array}\right.
+\]</div>
+<p>对 <span class="arithmatex">\(\boldsymbol{q}=\left (s, \boldsymbol{v}^{T}\right)^{T}\)</span>，若 <span class="arithmatex">\(s=0\)</span> 则称 <span class="arithmatex">\(\boldsymbol{q}\)</span> 为虚四元数，或纯虚四元数；若 <span class="arithmatex">\(\boldsymbol{V}=\mathbf{0}\)</span>，则称 <span class="arithmatex">\(\boldsymbol{q}\)</span> 为实四元数。令 <span class="arithmatex">\(\boldsymbol{q}_{a}=\left (s_{a}, \boldsymbol{v}_{a}^{T}\right)^{T}, \boldsymbol{q}_{b}=\left (s_{b}, \boldsymbol{v}_{b}^{T}\right)^{T}\)</span>。</p>
+<p>四元数的基本运算:</p>
+<p>加减法：<span class="arithmatex">\(\boldsymbol{q}_{a} \pm \boldsymbol{q}_{b}=\left (\begin{array}{l}s_{a} \pm s_{b} \\ \boldsymbol{v}_{a} \pm \boldsymbol{v}_{b}\end{array}\right)\)</span>。</p>
+<p>乘法：<span class="arithmatex">\(\boldsymbol{q}_{a} \boldsymbol{q}_{b}=\left (\begin{array}{c}s_{a} s_{b}-\boldsymbol{v}_{a}^{T} \boldsymbol{v}_{b} \\ s_{a} \boldsymbol{V}_{b}+s_{b} \boldsymbol{v}_{a}+\boldsymbol{V}_{a} \times \boldsymbol{V}_{b}\end{array}\right)\)</span>。 </p>
+<p>模长：<span class="arithmatex">\(\|\boldsymbol{q}\|=\|\dot{s}\|,\left\|\boldsymbol{q}_{2} \boldsymbol{q}_{b}\right\|=\left\|\boldsymbol{q}_{a}\right\|\left\|\boldsymbol{q}_{b}\right\|\)</span>。</p>
+<p>数乘：<span class="arithmatex">\(k \boldsymbol{q}=\left (k s, k \boldsymbol{v}^{T}\right)^{T}\)</span>。</p>
+<p>共轭：<span class="arithmatex">\(\boldsymbol{q}^{*}=\left (\begin{array}{c}s \\ -\boldsymbol{v}\end{array}\right), \boldsymbol{q} \boldsymbol{q}^{*}=\boldsymbol{q}^{*} \boldsymbol{q}=\left (s^{2}+\boldsymbol{v}^{T} \boldsymbol{v}, \mathbf{0}\right)^{T}=\|\boldsymbol{q}\|^{2}+0 i+0 j+0 k=\|\boldsymbol{q}\|^{2}\)</span>。</p>
+<p>逆：<span class="arithmatex">\(\quad \boldsymbol{q}^{-1}=\frac{\boldsymbol{q}^{*}}{\|\boldsymbol{q}\|^{2}}, \boldsymbol{q} \boldsymbol{q}^{-1}=\boldsymbol{q}^{-1} \boldsymbol{q}=1\)</span>。</p>
+<p>若 <span class="arithmatex">\(\left\|\boldsymbol{q}_{a}\right\|=\left\|\boldsymbol{q}_{b}\right\|=1\)</span>，则 <span class="arithmatex">\(\left (\boldsymbol{q}_{a} \boldsymbol{q}_{b}\right)^{-1}=\boldsymbol{q}_{b}^{-1} \boldsymbol{q}_{a}^{-1}\)</span>。</p>
+<p>单位四元数表示旋转: 单位四元数实际上具有三个自由度, 对应于三维空间中的旋转。</p>
+<p>将三维空间中的点 <span class="arithmatex">\(\mathrm{P}(x, y, z)\)</span> 用虚四元数 <span class="arithmatex">\(\boldsymbol{p}=(0, x, y, z)^{T}\)</span> 表示，以及一个由四元数 <span class="arithmatex">\(\boldsymbol{q}\)</span> 指定的旋转，则旋转后的点 <span class="arithmatex">\(p^{\prime}\)</span> 可表示为：</p>
+<div class="arithmatex">\[
+\boldsymbol{p}^{\prime}=\boldsymbol{q} \boldsymbol{p} \boldsymbol{q}^{-1}
+\]</div>
+<p>上述乘法均为四元数乘法，结果 <span class="arithmatex">\(p^{\prime}\)</span> 也是虚四元数，其虚部就是旋转后点的坐标。</p>
+<p>任意单元四元数描述了一个旋转, 该旋转也可用旋转矩阵或旋转向量表示。</p>
+<p>三维空间中, 从四元数到旋转矩阵的变换关系为：</p>
+<div class="arithmatex">\[
+\boldsymbol{R}=\boldsymbol{v}^{T}+s^{2} \boldsymbol{I}+2 s \boldsymbol{v}^{\prime}+\left (\boldsymbol{v}^{\wedge}\right)^{2}
+\]</div>
+<p>三维空间中，绕单位向量 <span class="arithmatex">\(n\)</span> 逆时针旋转 <span class="arithmatex">\(\theta\)</span>，对应于单位四元数 <span class="arithmatex">\(\boldsymbol{q}=\left (\cos \frac{\theta}{2}, \boldsymbol{n}^{T} \sin \frac{\theta}{2}\right)^{T}\)</span> 。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-present <a href="https://github.com/XiStudyGroup" target="_blank" rel="noopener noreferrer">XiStudyGroup</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Axi404" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.tracking", "navigation.top", "search.highlight", "search.share", "search.suggest", "content.code.annotate", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
